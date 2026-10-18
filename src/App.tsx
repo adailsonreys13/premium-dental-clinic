@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, Check, ChevronDown, Clock3,
-  HeartHandshake, MapPin, Menu, MessageCircle, ShieldCheck, Sparkles,
+  MapPin, Menu, MessageCircle, ShieldCheck, Sparkles,
   Smile, Star, X, type LucideIcon
 } from "lucide-react";
 
