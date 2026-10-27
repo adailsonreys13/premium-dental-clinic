@@ -1,18 +1,25 @@
-InVzZSBjbGllbnQiOwoKaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3Qi
-OwppbXBvcnQgKiBhcyBQcm9ncmVzc1ByaW1pdGl2ZSBmcm9tICJAcmFkaXgt
-dWkvcmVhY3QtcHJvZ3Jlc3MiOwoKaW1wb3J0IHsgY24gfSBmcm9tICJAL2xp
-Yi91dGlscyI7Cgpjb25zdCBQcm9ncmVzcyA9IFJlYWN0LmZvcndhcmRSZWY8
-CiAgUmVhY3QuRWxlbWVudFJlZjx0eXBlb2YgUHJvZ3Jlc3NQcmltaXRpdmUu
-Um9vdD4sCiAgUmVhY3QuQ29tcG9uZW50UHJvcHNXaXRob3V0UmVmPHR5cGVv
-ZiBQcm9ncmVzc1ByaW1pdGl2ZS5Sb290Pgo+KCh7IGNsYXNzTmFtZSwgdmFs
-dWUsIC4uLnByb3BzIH0sIHJlZikgPT4gKAogIDxQcm9ncmVzc1ByaW1pdGl2
-ZS5Sb290CiAgICByZWY9e3JlZn0KICAgIGNsYXNzTmFtZT17Y24oInJlbGF0
-aXZlIGgtMiB3LWZ1bGwgb3ZlcmZsb3ctaGlkZGVuIHJvdW5kZWQtZnVsbCBi
-Zy1wcmltYXJ5LzIwIiwgY2xhc3NOYW1lKX0KICAgIHsuLi5wcm9wc30KICA+
-CiAgICA8UHJvZ3Jlc3NQcmltaXRpdmUuSW5kaWNhdG9yCiAgICAgIGNsYXNz
-TmFtZT0iaC1mdWxsIHctZnVsbCBmbGV4LTEgYmctcHJpbWFyeSB0cmFuc2l0
-aW9uLWFsbCIKICAgICAgc3R5bGU9e3sgdHJhbnNmb3JtOiBgdHJhbnNsYXRl
-WCgtJHsxMDAgLSAodmFsdWUgfHwgMCl9JSlgIH19CiAgICAvPgogIDwvUHJv
-Z3Jlc3NQcmltaXRpdmUuUm9vdD4KKSk7ClByb2dyZXNzLmRpc3BsYXlOYW1l
-ID0gUHJvZ3Jlc3NQcmltaXRpdmUuUm9vdC5kaXNwbGF5TmFtZTsKCmV4cG9y
-dCB7IFByb2dyZXNzIH07Cg==
+"use client";
+
+import * as React from "react";
+import * as ProgressPrimitive from "@radix-ui/react-progress";
+
+import { cn } from "@/lib/utils";
+
+const Progress = React.forwardRef<
+  React.ElementRef<typeof ProgressPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
+>(({ className, value, ...props }, ref) => (
+  <ProgressPrimitive.Root
+    ref={ref}
+    className={cn("relative h-2 w-full overflow-hidden rounded-full bg-primary/20", className)}
+    {...props}
+  >
+    <ProgressPrimitive.Indicator
+      className="h-full w-full flex-1 bg-primary transition-all"
+      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+    />
+  </ProgressPrimitive.Root>
+));
+Progress.displayName = ProgressPrimitive.Root.displayName;
+
+export { Progress };
