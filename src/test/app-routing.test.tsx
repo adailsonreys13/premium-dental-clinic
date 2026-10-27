@@ -1,16 +1,17 @@
-aW1wb3J0IHsgUXVlcnlDbGllbnQgfSBmcm9tICJAdGFuc3RhY2svcmVhY3Qt
-cXVlcnkiOwppbXBvcnQgeyBjcmVhdGVSb3V0ZXIsIHJvb3RSb3V0ZUlkIH0g
-ZnJvbSAiQHRhbnN0YWNrL3JlYWN0LXJvdXRlciI7CmltcG9ydCB7IGRlc2Ny
-aWJlLCBleHBlY3QsIGl0IH0gZnJvbSAidml0ZXN0IjsKCmltcG9ydCB7IHJv
-dXRlVHJlZSB9IGZyb20gIkAvcm91dGVUcmVlLmdlbiI7CgovLyBNYXRjaCBy
-b3V0ZXMgd2l0aG91dCBydW5uaW5nIGxvYWRlcnMgb3IgcmVuZGVyaW5nOiBs
-b2FkZXJzIG1heSBuZWVkIGEgc2VydmVyIG9yCi8vIG5ldHdvcmsgdGhlIHRl
-c3QgcnVuIGxhY2tzLCBhbmQganNkb20gbmV2ZXIgbG9hZHMgdGhlIHN0eWxl
-c2hlZXRzIFJlYWN0IHdhaXRzIG9uLgpkZXNjcmliZSgiQXBwIHJvdXRpbmci
-LCAoKSA9PiB7CiAgaXQoIm1hdGNoZXMgYSBwYWdlIGZvciAvIGluc3RlYWQg
-b2YgZmFsbGluZyBiYWNrIHRvIG5vdCBmb3VuZCIsICgpID0+IHsKICAgIGNv
-bnN0IHJvdXRlciA9IGNyZWF0ZVJvdXRlcih7IHJvdXRlVHJlZSwgY29udGV4
-dDogeyBxdWVyeUNsaWVudDogbmV3IFF1ZXJ5Q2xpZW50KCkgfSB9KTsKCiAg
-ICBjb25zdCBtYXRjaGVzID0gcm91dGVyLm1hdGNoUm91dGVzKCIvIik7Cgog
-ICAgZXhwZWN0KG1hdGNoZXMuYXQoLTEpPy5yb3V0ZUlkKS5ub3QudG9CZShy
-b290Um91dGVJZCk7CiAgfSk7Cn0pOwo=
+import { QueryClient } from "@tanstack/react-query";
+import { createRouter, rootRouteId } from "@tanstack/react-router";
+import { describe, expect, it } from "vitest";
+
+import { routeTree } from "@/routeTree.gen";
+
+// Match routes without running loaders or rendering: loaders may need a server or
+// network the test run lacks, and jsdom never loads the stylesheets React waits on.
+describe("App routing", () => {
+  it("matches a page for / instead of falling back to not found", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/");
+
+    expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
+  });
+});
