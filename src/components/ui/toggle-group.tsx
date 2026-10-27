@@ -1,39 +1,57 @@
-InVzZSBjbGllbnQiOwoKaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3Qi
-OwppbXBvcnQgKiBhcyBUb2dnbGVHcm91cFByaW1pdGl2ZSBmcm9tICJAcmFk
-aXgtdWkvcmVhY3QtdG9nZ2xlLWdyb3VwIjsKaW1wb3J0IHsgdHlwZSBWYXJp
-YW50UHJvcHMgfSBmcm9tICJjbGFzcy12YXJpYW5jZS1hdXRob3JpdHkiOwoK
-aW1wb3J0IHsgY24gfSBmcm9tICJAL2xpYi91dGlscyI7CmltcG9ydCB7IHRv
-Z2dsZVZhcmlhbnRzIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL3RvZ2dsZSI7
-Cgpjb25zdCBUb2dnbGVHcm91cENvbnRleHQgPSBSZWFjdC5jcmVhdGVDb250
-ZXh0PFZhcmlhbnRQcm9wczx0eXBlb2YgdG9nZ2xlVmFyaWFudHM+Pih7CiAg
-c2l6ZTogImRlZmF1bHQiLAogIHZhcmlhbnQ6ICJkZWZhdWx0IiwKfSk7Cgpj
-b25zdCBUb2dnbGVHcm91cCA9IFJlYWN0LmZvcndhcmRSZWY8CiAgUmVhY3Qu
-RWxlbWVudFJlZjx0eXBlb2YgVG9nZ2xlR3JvdXBQcmltaXRpdmUuUm9vdD4s
-CiAgUmVhY3QuQ29tcG9uZW50UHJvcHNXaXRob3V0UmVmPHR5cGVvZiBUb2dn
-bGVHcm91cFByaW1pdGl2ZS5Sb290PiAmCiAgICBWYXJpYW50UHJvcHM8dHlw
-ZW9mIHRvZ2dsZVZhcmlhbnRzPgo+KCh7IGNsYXNzTmFtZSwgdmFyaWFudCwg
-c2l6ZSwgY2hpbGRyZW4sIC4uLnByb3BzIH0sIHJlZikgPT4gKAogIDxUb2dn
-bGVHcm91cFByaW1pdGl2ZS5Sb290CiAgICByZWY9e3JlZn0KICAgIGNsYXNz
-TmFtZT17Y24oImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdh
-cC0xIiwgY2xhc3NOYW1lKX0KICAgIHsuLi5wcm9wc30KICA+CiAgICA8VG9n
-Z2xlR3JvdXBDb250ZXh0LlByb3ZpZGVyIHZhbHVlPXt7IHZhcmlhbnQsIHNp
-emUgfX0+e2NoaWxkcmVufTwvVG9nZ2xlR3JvdXBDb250ZXh0LlByb3ZpZGVy
-PgogIDwvVG9nZ2xlR3JvdXBQcmltaXRpdmUuUm9vdD4KKSk7CgpUb2dnbGVH
-cm91cC5kaXNwbGF5TmFtZSA9IFRvZ2dsZUdyb3VwUHJpbWl0aXZlLlJvb3Qu
-ZGlzcGxheU5hbWU7Cgpjb25zdCBUb2dnbGVHcm91cEl0ZW0gPSBSZWFjdC5m
-b3J3YXJkUmVmPAogIFJlYWN0LkVsZW1lbnRSZWY8dHlwZW9mIFRvZ2dsZUdy
-b3VwUHJpbWl0aXZlLkl0ZW0+LAogIFJlYWN0LkNvbXBvbmVudFByb3BzV2l0
-aG91dFJlZjx0eXBlb2YgVG9nZ2xlR3JvdXBQcmltaXRpdmUuSXRlbT4gJgog
-ICAgVmFyaWFudFByb3BzPHR5cGVvZiB0b2dnbGVWYXJpYW50cz4KPigoeyBj
-bGFzc05hbWUsIGNoaWxkcmVuLCB2YXJpYW50LCBzaXplLCAuLi5wcm9wcyB9
-LCByZWYpID0+IHsKICBjb25zdCBjb250ZXh0ID0gUmVhY3QudXNlQ29udGV4
-dChUb2dnbGVHcm91cENvbnRleHQpOwoKICByZXR1cm4gKAogICAgPFRvZ2ds
-ZUdyb3VwUHJpbWl0aXZlLkl0ZW0KICAgICAgcmVmPXtyZWZ9CiAgICAgIGNs
-YXNzTmFtZT17Y24oCiAgICAgICAgdG9nZ2xlVmFyaWFudHMoewogICAgICAg
-ICAgdmFyaWFudDogY29udGV4dC52YXJpYW50IHx8IHZhcmlhbnQsCiAgICAg
-ICAgICBzaXplOiBjb250ZXh0LnNpemUgfHwgc2l6ZSwKICAgICAgICB9KSwK
-ICAgICAgICBjbGFzc05hbWUsCiAgICAgICl9CiAgICAgIHsuLi5wcm9wc30K
-ICAgID4KICAgICAge2NoaWxkcmVufQogICAgPC9Ub2dnbGVHcm91cFByaW1p
-dGl2ZS5JdGVtPgogICk7Cn0pOwoKVG9nZ2xlR3JvdXBJdGVtLmRpc3BsYXlO
-YW1lID0gVG9nZ2xlR3JvdXBQcmltaXRpdmUuSXRlbS5kaXNwbGF5TmFtZTsK
-CmV4cG9ydCB7IFRvZ2dsZUdyb3VwLCBUb2dnbGVHcm91cEl0ZW0gfTsK
+"use client";
+
+import * as React from "react";
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
+import { type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+import { toggleVariants } from "@/components/ui/toggle";
+
+const ToggleGroupContext = React.createContext<VariantProps<typeof toggleVariants>>({
+  size: "default",
+  variant: "default",
+});
+
+const ToggleGroup = React.forwardRef<
+  React.ElementRef<typeof ToggleGroupPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
+    VariantProps<typeof toggleVariants>
+>(({ className, variant, size, children, ...props }, ref) => (
+  <ToggleGroupPrimitive.Root
+    ref={ref}
+    className={cn("flex items-center justify-center gap-1", className)}
+    {...props}
+  >
+    <ToggleGroupContext.Provider value={{ variant, size }}>{children}</ToggleGroupContext.Provider>
+  </ToggleGroupPrimitive.Root>
+));
+
+ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
+
+const ToggleGroupItem = React.forwardRef<
+  React.ElementRef<typeof ToggleGroupPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &
+    VariantProps<typeof toggleVariants>
+>(({ className, children, variant, size, ...props }, ref) => {
+  const context = React.useContext(ToggleGroupContext);
+
+  return (
+    <ToggleGroupPrimitive.Item
+      ref={ref}
+      className={cn(
+        toggleVariants({
+          variant: context.variant || variant,
+          size: context.size || size,
+        }),
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </ToggleGroupPrimitive.Item>
+  );
+});
+
+ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
+
+export { ToggleGroup, ToggleGroupItem };
