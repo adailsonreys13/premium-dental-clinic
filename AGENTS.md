@@ -1,11 +1,10 @@
-PCEtLSBMT1ZBQkxFOkJFR0lOIC0tPgo+IFshSU1QT1JUQU5UXQo+IFRoaXMg
-cHJvamVjdCBpcyBjb25uZWN0ZWQgdG8gW0xvdmFibGVdKGh0dHBzOi8vbG92
-YWJsZS5kZXYpLiBBdm9pZCByZXdyaXRpbmcKPiBwdWJsaXNoZWQgZ2l0IGhp
-c3Rvcnkg4oCUIGZvcmNlIHB1c2hpbmcsIG9yIHJlYmFzaW5nL2FtZW5kaW5n
-L3NxdWFzaGluZyBjb21taXRzCj4gdGhhdCBhcmUgYWxyZWFkeSBwdXNoZWQg
-4oCUIGFzIGl0IHJld3JpdGVzIGhpc3Rvcnkgb24gTG92YWJsZSdzIHNpZGUg
-YW5kIHRoZQo+IHVzZXIgd2lsbCBsaWtlbHkgbG9zZSB0aGVpciBwcm9qZWN0
-IGhpc3RvcnkuCj4KPiBDb21taXRzIHlvdSBwdXNoIHRvIHRoZSBjb25uZWN0
-ZWQgYnJhbmNoIHN5bmMgYmFjayB0byBMb3ZhYmxlIGFuZCBzaG93IHVwIGlu
-Cj4gdGhlIGVkaXRvciwgc28ga2VlcCB0aGUgYnJhbmNoIGluIGEgd29ya2lu
-ZyBzdGF0ZS4KPCEtLSBMT1ZBQkxFOkVORCAtLT4K
+<!-- LOVABLE:BEGIN -->
+> [!IMPORTANT]
+> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
+> published git history — force pushing, or rebasing/amending/squashing commits
+> that are already pushed — as it rewrites history on Lovable's side and the
+> user will likely lose their project history.
+>
+> Commits you push to the connected branch sync back to Lovable and show up in
+> the editor, so keep the branch in a working state.
+<!-- LOVABLE:END -->
