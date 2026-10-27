@@ -1,28 +1,40 @@
-aW1wb3J0IGpzIGZyb20gIkBlc2xpbnQvanMiOwppbXBvcnQgZXNsaW50UGx1
-Z2luUHJldHRpZXIgZnJvbSAiZXNsaW50LXBsdWdpbi1wcmV0dGllci9yZWNv
-bW1lbmRlZCI7CmltcG9ydCBnbG9iYWxzIGZyb20gImdsb2JhbHMiOwppbXBv
-cnQgcmVhY3RIb29rcyBmcm9tICJlc2xpbnQtcGx1Z2luLXJlYWN0LWhvb2tz
-IjsKaW1wb3J0IHJlYWN0UmVmcmVzaCBmcm9tICJlc2xpbnQtcGx1Z2luLXJl
-YWN0LXJlZnJlc2giOwppbXBvcnQgdHNlc2xpbnQgZnJvbSAidHlwZXNjcmlw
-dC1lc2xpbnQiOwoKZXhwb3J0IGRlZmF1bHQgdHNlc2xpbnQuY29uZmlnKAog
-IHsgaWdub3JlczogWyJkaXN0IiwgIi5vdXRwdXQiLCAiLnZpbnhpIl0gfSwK
-ICB7CiAgICBleHRlbmRzOiBbanMuY29uZmlncy5yZWNvbW1lbmRlZCwgLi4u
-dHNlc2xpbnQuY29uZmlncy5yZWNvbW1lbmRlZF0sCiAgICBmaWxlczogWyIq
-Ki8qLnt0cyx0c3h9Il0sCiAgICBsYW5ndWFnZU9wdGlvbnM6IHsKICAgICAg
-ZWNtYVZlcnNpb246IDIwMjAsCiAgICAgIGdsb2JhbHM6IGdsb2JhbHMuYnJv
-d3NlciwKICAgIH0sCiAgICBwbHVnaW5zOiB7CiAgICAgICJyZWFjdC1ob29r
-cyI6IHJlYWN0SG9va3MsCiAgICAgICJyZWFjdC1yZWZyZXNoIjogcmVhY3RS
-ZWZyZXNoLAogICAgfSwKICAgIHJ1bGVzOiB7CiAgICAgIC4uLnJlYWN0SG9v
-a3MuY29uZmlncy5yZWNvbW1lbmRlZC5ydWxlcywKICAgICAgIm5vLXJlc3Ry
-aWN0ZWQtaW1wb3J0cyI6IFsKICAgICAgICAiZXJyb3IiLAogICAgICAgIHsK
-ICAgICAgICAgIHBhdGhzOiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAg
-ICBuYW1lOiAic2VydmVyLW9ubHkiLAogICAgICAgICAgICAgIG1lc3NhZ2U6
-CiAgICAgICAgICAgICAgICAiVGFuU3RhY2sgU3RhcnQgZG9lcyBub3QgdXNl
-IHRoZSBOZXh0LmpzIGBzZXJ2ZXItb25seWAgcGFja2FnZS4gUmVuYW1lIHRo
-ZSBtb2R1bGUgdG8gYCouc2VydmVyLnRzYCBvciBtYXJrIGl0IHdpdGggYEB0
-YW5zdGFjay9yZWFjdC1zdGFydC9zZXJ2ZXItb25seWAuIiwKICAgICAgICAg
-ICAgfSwKICAgICAgICAgIF0sCiAgICAgICAgfSwKICAgICAgXSwKICAgICAg
-InJlYWN0LXJlZnJlc2gvb25seS1leHBvcnQtY29tcG9uZW50cyI6IFsid2Fy
-biIsIHsgYWxsb3dDb25zdGFudEV4cG9ydDogdHJ1ZSB9XSwKICAgICAgIkB0
-eXBlc2NyaXB0LWVzbGludC9uby11bnVzZWQtdmFycyI6ICJvZmYiLAogICAg
-fSwKICB9LAogIGVzbGludFBsdWdpblByZXR0aWVyLAopOwo=
+import js from "@eslint/js";
+import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["dist", ".output", ".vinxi"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "no-restricted-imports": [
+        "error",
+        {
+          paths: [
+            {
+              name: "server-only",
+              message:
+                "TanStack Start does not use the Next.js `server-only` package. Rename the module to `*.server.ts` or mark it with `@tanstack/react-start/server-only`.",
+            },
+          ],
+        },
+      ],
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "@typescript-eslint/no-unused-vars": "off",
+    },
+  },
+  eslintPluginPrettier,
+);
