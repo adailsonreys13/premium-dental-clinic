@@ -1,18 +1,22 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiOwoKaW1wb3J0IHsgY24g
-fSBmcm9tICJAL2xpYi91dGlscyI7Cgpjb25zdCBJbnB1dCA9IFJlYWN0LmZv
-cndhcmRSZWY8SFRNTElucHV0RWxlbWVudCwgUmVhY3QuQ29tcG9uZW50UHJv
-cHM8ImlucHV0Ij4+KAogICh7IGNsYXNzTmFtZSwgdHlwZSwgLi4ucHJvcHMg
-fSwgcmVmKSA9PiB7CiAgICByZXR1cm4gKAogICAgICA8aW5wdXQKICAgICAg
-ICB0eXBlPXt0eXBlfQogICAgICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICAg
-ICAiZmxleCBoLTkgdy1mdWxsIHJvdW5kZWQtbWQgYm9yZGVyIGJvcmRlci1p
-bnB1dCBiZy10cmFuc3BhcmVudCBweC0zIHB5LTEgdGV4dC1iYXNlIHNoYWRv
-dy1zbSB0cmFuc2l0aW9uLWNvbG9ycyBmaWxlOmJvcmRlci0wIGZpbGU6Ymct
-dHJhbnNwYXJlbnQgZmlsZTp0ZXh0LXNtIGZpbGU6Zm9udC1tZWRpdW0gZmls
-ZTp0ZXh0LWZvcmVncm91bmQgcGxhY2Vob2xkZXI6dGV4dC1tdXRlZC1mb3Jl
-Z3JvdW5kIGZvY3VzLXZpc2libGU6b3V0bGluZS1ub25lIGZvY3VzLXZpc2li
-bGU6cmluZy0xIGZvY3VzLXZpc2libGU6cmluZy1yaW5nIGRpc2FibGVkOmN1
-cnNvci1ub3QtYWxsb3dlZCBkaXNhYmxlZDpvcGFjaXR5LTUwIG1kOnRleHQt
-c20iLAogICAgICAgICAgY2xhc3NOYW1lLAogICAgICAgICl9CiAgICAgICAg
-cmVmPXtyZWZ9CiAgICAgICAgey4uLnByb3BzfQogICAgICAvPgogICAgKTsK
-ICB9LAopOwpJbnB1dC5kaXNwbGF5TmFtZSA9ICJJbnB1dCI7CgpleHBvcnQg
-eyBJbnB1dCB9Owo=
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
+
+const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+  ({ className, type, ...props }, ref) => {
+    return (
+      <input
+        type={type}
+        className={cn(
+          "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          className,
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  },
+);
+Input.displayName = "Input";
+
+export { Input };
