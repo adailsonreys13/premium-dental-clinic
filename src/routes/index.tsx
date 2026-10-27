@@ -144,9 +144,9 @@ function Index() {
     <section className="care-features" aria-label="Diferenciais da Premium Dental Clinic">
       <div className="care-features-inner">
         {[
-          { image:"/profissonais%20especializados.webp", title:"Profissionais especializados", caption:"Experiência e dedicação" },
-          { image:"/atendimento%20humanizado.webp", title:"Atendimento humanizado", caption:"Cuidado em cada detalhe" },
-          { image:"/equipamentos%20de%20ponta.webp", title:"Equipamentos de ponta", caption:"Tecnologia para seu sorriso" }
+          { image:"/compressed/profissonais%20especializados.webp", title:"Profissionais especializados", caption:"Experiência e dedicação" },
+          { image:"/compressed/atendimento%20humanizado.webp", title:"Atendimento humanizado", caption:"Cuidado em cada detalhe" },
+          { image:"/compressed/equipamentos%20de%20ponta.webp", title:"Equipamentos de ponta", caption:"Tecnologia para seu sorriso" }
         ].map(({image,title,caption})=>(
           <div key={title} className="care-feature care-feature-reveal">
             <span className="care-feature-icon"><img src={image} alt="" loading="lazy" decoding="async" /></span>
@@ -215,7 +215,7 @@ function Index() {
       </div>
       <div className="fel-rehab-visual">
         <div className="fel-rehab-ring"/><div className="fel-rehab-ring fel-rehab-ring-inner"/>
-        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85" alt="Dente 3D com escudo azul simbolizando proteção e cuidado odontológico" loading="lazy"/>
+        <img src="/compressed/Dente-3D-com-escudo-azul.webp" alt="Dente 3D com escudo azul simbolizando proteção e cuidado odontológico" loading="lazy"/>
       </div>
     </section>
     <section id="implantes" className="implant-showcase section-wrap" aria-labelledby="implant-showcase-title">
