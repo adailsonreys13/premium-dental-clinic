@@ -5850,3 +5850,8 @@ main .care-feature-copy small{font-size:12px;line-height:1.4;color:#c8d9ea}
 .video-testimonial-start>span:not(.video-start-control){color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.8)}
 .video-testimonial-start>small{color:#f6e9d8;text-shadow:0 2px 8px rgba(0,0,0,.8)}
 .video-start-control{background:linear-gradient(135deg,#a77935,#d9ae65);color:#fff;box-shadow:0 7px 22px rgba(0,0,0,.35)}
+
+
+/* Marca tipográfica do Premium Dental Clinic — substitui o logotipo original do projeto-base. */
+.premium-clinic-wordmark{display:inline-flex;flex-direction:column;gap:2px;line-height:1.05;font-family:Montserrat,Inter,sans-serif;font-size:clamp(12px,1.2vw,16px);font-weight:500;letter-spacing:.2em;color:inherit;white-space:nowrap}
+.premium-clinic-wordmark strong{font-size:.88em;font-weight:800;letter-spacing:.12em}
