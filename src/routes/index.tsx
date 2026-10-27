@@ -61,16 +61,16 @@ const treatmentSubtitles = ["Reabilitação oral","Harmonia estética","Estétic
 
 const WHATSAPP_URL = "https://wa.me/557999914909?text=" + encodeURIComponent("Olá! Gostaria de agendar uma avaliação na Premium Dental Clinic.");
 
-function ContactCard({ title, description, href, image, index }: { title: string; description: string; href: string; image: string; index: number }) {
-  return <article className="video-testimonial-card premium-reveal">
+function TestimonialPlaceholder({ index, image }: { index: number; image: string }) {
+  return <article className="video-testimonial-card premium-reveal" aria-label={`Espaço reservado para depoimento ${index + 1}`}>
     <div className="video-testimonial-frame">
-      <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="video-testimonial-start" style={{backgroundImage:`linear-gradient(180deg, rgba(4,21,37,.03) 18%, rgba(4,21,37,.84) 100%), url("${image}")`}} aria-label={title}>
+      <div className="video-testimonial-start" style={{backgroundImage:`linear-gradient(180deg, rgba(4,21,37,.08) 18%, rgba(4,21,37,.82) 100%), url("${image}")`}}>
         <MessageCircle size={28} />
-        <span>{String(index + 1).padStart(2, "0")}</span>
+        <span>Depoimento {String(index + 1).padStart(2, "0")}</span>
         <small>Premium Dental Clinic</small>
-        <strong className="contact-card-title">{title}</strong>
-        <span className="video-start-control">{description} <ArrowUpRight size={17} /></span>
-      </a>
+        <strong className="contact-card-title">Vídeo em breve</strong>
+        <span className="video-start-control">Espaço reservado</span>
+      </div>
     </div>
   </article>;
 }
@@ -287,13 +287,13 @@ function Index() {
     <section className="editorial-portrait section-wrap"><img src="/felicita-atendimento.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} loading="lazy" decoding="async" fetchPriority="low" alt="Profissional de odontologia"/><div><span className="eyebrow">ATENÇÃO E ACOLHIMENTO</span><h2>Uma experiência pensada para você.</h2><p>Da primeira conversa ao acompanhamento, o cuidado está em ouvir, orientar e respeitar suas necessidades.</p></div></section></>}
     {(activeSection === "inicio" || activeSection === "sobre") && <>
     <section id="depoimentos" className="testimonials-section video-testimonials"><div className="section-wrap">
-      <span className="eyebrow">ESTAMOS À DISPOSIÇÃO</span>
-      <h2>Seu próximo passo começa com <span>uma conversa.</span></h2>
-      <p className="video-testimonials-intro">Escolha como quer continuar: agende sua avaliação, conheça os tratamentos ou encontre a clínica.</p>
+      <span className="eyebrow">DEPOIMENTOS</span>
+      <h2>Experiências que merecem <span>ser compartilhadas.</span></h2>
+      <p className="video-testimonials-intro">Em breve, você poderá conhecer os relatos de quem viveu uma experiência na Premium Dental Clinic.</p>
       <div className="video-testimonials-grid">
-        <ContactCard index={0} title="Agende sua avaliação" description="Falar no WhatsApp" href={WHATSAPP_URL} image="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85" />
-        <ContactCard index={1} title="Conheça os tratamentos" description="Ver tratamentos" href="#tratamentos" image="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85" />
-        <ContactCard index={2} title="Como chegar" description="Ver localização" href="#localizacao" image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=85" />
+        <TestimonialPlaceholder index={0} image="/compressed/atendimento%20humanizado.webp" />
+        <TestimonialPlaceholder index={1} image="/compressed/profissonais%20especializados.webp" />
+        <TestimonialPlaceholder index={2} image="/compressed/equipamentos%20de%20ponta.webp" />
       </div>
     </div></section>
     </>}
