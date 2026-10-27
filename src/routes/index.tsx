@@ -62,30 +62,17 @@ const treatmentSubtitles = ["Reabilitação oral","Harmonia estética","Estétic
 const WHATSAPP_URL = "https://wa.me/557999914909?text=" + encodeURIComponent("Olá! Gostaria de agendar uma avaliação na Premium Dental Clinic.");
 
 function ClickToPlayVideo({ file, index }: { file: string; index: number }) {
-  const [started, setStarted] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  useEffect(() => {
-    if (started) void videoRef.current?.play().catch(() => {});
-  }, [started]);
   return <article className="video-testimonial-card premium-reveal">
     <div className="video-testimonial-frame">
-      {started ? (
-        <video ref={videoRef} controls playsInline preload="auto" aria-label={`Vídeo ${index + 1} da Premium Dental Clinic`}>
-          <source src={`/${encodeURIComponent(file)}`} type="video/mp4" />
-          Seu navegador não suporta vídeos HTML5.
-        </video>
-      ) : (
-        <button type="button" className="video-testimonial-start" style={{backgroundImage:`linear-gradient(180deg, rgba(4,21,37,.03) 28%, rgba(4,21,37,.76) 100%), url("/video-covers/video-${index + 1}.webp")`}} onClick={() => setStarted(true)} aria-label={`Reproduzir vídeo ${index + 1} da Premium Dental Clinic`}>
-          <Quote size={28} />
-          <span>Vídeo {String(index + 1).padStart(2, "0")}</span>
-          <small>Premium Dental Clinic Odontologia Integrada</small>
-          <span className="video-start-control"><Play size={19} fill="currentColor" /> Assistir vídeo</span>
-        </button>
-      )}
+      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="video-testimonial-start" style={{backgroundImage:`linear-gradient(180deg, rgba(4,21,37,.03) 28%, rgba(4,21,37,.82) 100%), url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85")`}} aria-label={`Falar com a Premium Dental Clinic sobre ${file.replace(".mp4", "")}`}>
+        <Quote size={28} />
+        <span>Conteúdo {String(index + 1).padStart(2, "0")}</span>
+        <small>Premium Dental Clinic</small>
+        <span className="video-start-control"><MessageCircle size={19} /> Falar com a equipe</span>
+      </a>
     </div>
   </article>;
 }
-
 function Index() {
   const validSections = ["inicio", "sobre", "tratamentos", "resultados", "equipe", "localizacao", ...treatments.map((_, index) => `tratamento-${index + 1}`)];
   const readSection = () => {
@@ -182,7 +169,7 @@ function Index() {
       <div className="clinic-story-visual premium-reveal">
         <img src="/felicita-recepcao.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Recepção oficial da Premium Dental Clinic" loading="lazy" decoding="async" />
         <span className="clinic-story-label">Premium Dental Clinic · Odontologia Integrada</span>
-        <img className="clinic-story-tooth-3d" src="/Dente-3D-com-escudo-azul.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img className="clinic-story-tooth-3d" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85" alt="" aria-hidden="true" loading="lazy" decoding="async" />
       </div>
       <div className="clinic-story-content premium-reveal">
         <span className="eyebrow">NOSSA HISTÓRIA</span>
@@ -207,7 +194,7 @@ function Index() {
         </div>
         <div className="implant-showcase-art" aria-label="Ilustração esquemática de arcada dentária e implante">
           <div className="implant-orbit implant-orbit-outer"/><div className="implant-orbit implant-orbit-inner"/>
-          <img className="implant-anatomy implant-3d-image" src="/implante-3d.webp" alt="Modelo tridimensional de implante dentário" loading="lazy" />
+          <img className="implant-anatomy implant-3d-image" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85" alt="Modelo tridimensional de implante dentário" loading="lazy" />
         </div>
         <div className="implant-showcase-points">
           <article className="implant-point"><span className="implant-dot"/><h3>Implante imediato</h3><p>Em casos selecionados, a instalação do implante pode acontecer em uma etapa próxima à extração.</p><button type="button" onClick={() => { window.location.hash = "tratamento-1"; }}>Saiba mais <ArrowUpRight size={14}/></button></article>
@@ -265,15 +252,15 @@ function Index() {
       <div className="team-directory-group"><h2>Profissionais de odontologia</h2>
         <div className="team-directory-grid">
           <article className="felicita-professional">
-            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85" alt="Fotografia do Dr. Geraldo Martins" loading="lazy" decoding="async" />
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85" alt="Imagem ilustrativa de profissional de odontologia" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Dr. Geraldo Martins</h3><p>CRO-SE 3149</p></div>
           </article>
           <article className="felicita-professional">
-            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=600&q=85" alt="Fotografia do Equipe odontológica" loading="lazy" decoding="async" />
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=600&q=85" alt="Imagem ilustrativa de profissional de odontologia" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Equipe odontológica</h3><p>Odontologia</p></div>
           </article>
           <article className="felicita-professional">
-            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85" alt="Retrato de profissional da clínica" loading="lazy" decoding="async" />
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85" alt="Imagem ilustrativa de profissional de odontologia" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Profissional da equipe</h3><p>Nome a confirmar</p></div>
           </article>
         </div>
@@ -283,10 +270,10 @@ function Index() {
         <div className="team-directory-grid">
           <article className="felicita-professional">
             <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85" alt="Fotografia de colaboradora da clínica" loading="lazy" decoding="async" />
-            <div className="team-professional-info"><span className="eyebrow">COLABORADORA DA CLÍNICA</span><h3>Lívia</h3><p>Função a confirmar</p></div>
+            <div className="team-professional-info"><span className="eyebrow">COLABORADORA DA CLÍNICA</span><h3>Equipe de atendimento</h3><p>Informações da equipe a confirmar</p></div>
           </article>
           <article className="felicita-professional">
-            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85" alt="Fotografia de colaboradora da Premium Dental Clinic" loading="lazy" decoding="async" />
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85" alt="Imagem ilustrativa da equipe de atendimento" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">COLABORADORA DA CLÍNICA</span><h3>Colaboradora</h3><p>Nome e função a confirmar</p></div>
           </article>
           <article className="felicita-professional">
@@ -301,7 +288,7 @@ function Index() {
     <section id="depoimentos" className="testimonials-section video-testimonials"><div className="section-wrap">
       <span className="eyebrow">DEPOIMENTOS</span>
       <h2>Experiências que merecem <span>ser compartilhadas.</span></h2>
-      <p className="video-testimonials-intro">Conheça a Premium Dental Clinic por meio dos nossos vídeos.</p>
+      <p className="video-testimonials-intro">Em breve, publicaremos conteúdos e informações da clínica. Enquanto isso, fale diretamente com nossa equipe.</p>
       <div className="video-testimonials-grid">
         {["video 1.mp4", "video 2.mp4", "video 3.mp4"].map((file, index) => (
           <ClickToPlayVideo key={file} file={file} index={index} />
