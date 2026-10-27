@@ -1,28 +1,28 @@
-# Premium Dental Clinic
+# Felicitá
 
-Site institucional responsivo da Premium Dental Clinic, em Simão Dias, Sergipe.
+Crie apenas uma página em branco com o texto "Site em desenvolvimento".
 
-## Tecnologias
-- React + TypeScript
-- Vite
-- CSS responsivo
-- Lucide React
+Use React, TypeScript e Tailwind CSS.
 
-## Executar localmente
-Requisitos: Node.js e npm.
+Não adicione funcionalidades, imagens, animações, banco de dados ou integrações. Vou desenvolver o restante pelo GitHub.
 
-```bash
-npm install
+This project was built with [Lovable](https://lovable.dev).
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/5123fb80-d2f8-4a04-b9b1-2f339c91b132).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
 npm run dev
 ```
-
-Para compilar a versão de produção: `npm run build`.
-
-## Dados a confirmar antes da publicação
-- WhatsApp configurado: `https://wa.me/557999914909`
-- Endereço informado: Avenida Coronel Loiola, 88, Simão Dias – SE
-- Responsável técnico informado: Dr. Geraldo Martins · CRO-SE 3149 · EPAO 538
-
-Confirme todos os dados, substitua imagens genéricas por fotografias autorizadas da clínica e adicione políticas legais necessárias antes de publicar.
-
-Este projeto é independente. O repositório Felicitá não foi alterado.
