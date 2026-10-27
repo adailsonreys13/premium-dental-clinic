@@ -56,7 +56,7 @@ const treatments = [
   { title: "Estética do sorriso", description: "Cuidados planejados para valorizar o sorriso natural.", icon: SmileAestheticIcon, tag: "CUIDADO" },
 ];
 
-const treatmentImages = ["/webp/Implantes%20dent%C3%A1rios.webp", "/webp/Facetas%20dent%C3%A1rias.webp", "/webp/Clareamento%20dental.webp", "/webp/Ortodontia.webp", "/webp/Pr%C3%B3teses%20dent%C3%A1rias.webp", "/webp/Est%C3%A9tica%20do%20sorriso.webp"];
+const treatmentImages = ["https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85"];
 const treatmentSubtitles = ["Reabilitação oral","Harmonia estética","Estética dental","Alinhamento do sorriso","Função e conforto","Cuidado personalizado"];
 
 const WHATSAPP_URL = "https://wa.me/557999914909?text=" + encodeURIComponent("Olá! Gostaria de agendar uma avaliação na Premium Dental Clinic.");
@@ -129,7 +129,7 @@ function Index() {
   return <main>
     <div className="top-note"><Heart size={13} /> Premium Dental Clinic: detalhes que acolhem, cuidado que transforma.</div>
     <header className="site-header">
-      <a href="#inicio" className="brand brand-official" aria-label="Premium Dental Clinic Clínica Especializada — início"><img className="premium-dental-official-logo" src="/logo%20Felicit%C3%A1.png" alt="Premium Dental Clinic Odontologia Integrada" decoding="async" /></a>
+      <a href="#inicio" className="brand brand-official" aria-label="Premium Dental Clinic Clínica Especializada — início"><span className="premium-clinic-wordmark">PREMIUM <strong>DENTAL CLINIC</strong></span></a>
       <nav className={menuOpen ? "navigation is-open" : "navigation"} aria-label="Navegação principal">
         <a href="#inicio" aria-current={activeSection === "inicio" ? "page" : undefined} onClick={() => setMenuOpen(false)}>Início</a>
         <a href="#sobre" aria-current={activeSection === "sobre" ? "page" : undefined} onClick={() => setMenuOpen(false)}>A clínica</a>
@@ -148,7 +148,7 @@ function Index() {
         <div className="hero-actions premium-reveal"><Button size="lg" onClick={abrirWhatsApp}>Agendar avaliação <ArrowUpRight /></Button></div>
       </div>
       <div className="hero-premium-visual" aria-label="Foto oficial da Premium Dental Clinic: atendimento odontológico">
-        <img className="hero-premium-photo" src="/premium-dental-consultorio.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: consulta odontológica humanizada" width={1024} height={1024} loading="eager" decoding="async" fetchPriority="high" />
+        <img className="hero-premium-photo" src="/felicita-consultorio.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: consulta odontológica humanizada" width={1024} height={1024} loading="eager" decoding="async" fetchPriority="high" />
 
       </div>
     </section>}
@@ -174,13 +174,13 @@ function Index() {
     {activeSection === "tratamentos" && <>
     <section className="treatments section-wrap" id="tratamentos">
       <div className="section-heading premium-reveal"><div><span className="eyebrow">CUIDADO QUE FAZ A DIFERENÇA</span>{activeSection === "tratamentos" ? <h1>Soluções para cada fase <span>do seu sorriso.</span></h1> : <h2>Soluções para cada fase <span>do seu sorriso.</span></h2>}</div><p>Conheça nossos tratamentos e descubra o cuidado ideal para o seu sorriso.</p></div>
-      <div className="editorial-strip premium-reveal"><img src="/premium-dental-consultorio.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: exame odontológico" loading="lazy" decoding="async" fetchPriority="low"/><div><span className="eyebrow">PRECISÃO E DELICADEZA</span><h2>Estrutura que acolhe. Cuidado que inspira.</h2><p>Conheça espaços preparados para receber você e converse com a equipe sobre as possibilidades de tratamentos.</p></div><img src="/premium-dental-atendimento.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: atendimento clínico" loading="lazy" decoding="async" fetchPriority="low"/></div><div className="treatment-grid treatment-photo-grid">{treatments.map(({ title, description, icon: Icon }, index) => <a href={`#tratamento-${index + 1}`} aria-label={`Conhecer ${title}`} className="treatment-card treatment-photo-card premium-reveal" key={title}><div className="treatment-photo-cover"><img src={treatmentImages[index]} alt={`Imagem do tratamento: ${title.toLowerCase()}`} loading="lazy" decoding="async" /></div><div className="treatment-photo-content"><div className="treatment-photo-heading"><span className="treatment-photo-icon"><Icon size={29} strokeWidth={1.6}/></span><div><h3>{title}</h3><small>{treatmentSubtitles[index]}</small></div></div><div className="treatment-photo-divider"/><p>{description}</p><span className="treatment-photo-button">Saiba mais <ArrowUpRight size={17}/></span></div></a>)}</div>
+      <div className="editorial-strip premium-reveal"><img src="/felicita-consultorio.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: exame odontológico" loading="lazy" decoding="async" fetchPriority="low"/><div><span className="eyebrow">PRECISÃO E DELICADEZA</span><h2>Estrutura que acolhe. Cuidado que inspira.</h2><p>Conheça espaços preparados para receber você e converse com a equipe sobre as possibilidades de tratamentos.</p></div><img src="/felicita-atendimento.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: atendimento clínico" loading="lazy" decoding="async" fetchPriority="low"/></div><div className="treatment-grid treatment-photo-grid">{treatments.map(({ title, description, icon: Icon }, index) => <a href={`#tratamento-${index + 1}`} aria-label={`Conhecer ${title}`} className="treatment-card treatment-photo-card premium-reveal" key={title}><div className="treatment-photo-cover"><img src={treatmentImages[index]} alt={`Imagem do tratamento: ${title.toLowerCase()}`} loading="lazy" decoding="async" /></div><div className="treatment-photo-content"><div className="treatment-photo-heading"><span className="treatment-photo-icon"><Icon size={29} strokeWidth={1.6}/></span><div><h3>{title}</h3><small>{treatmentSubtitles[index]}</small></div></div><div className="treatment-photo-divider"/><p>{description}</p><span className="treatment-photo-button">Saiba mais <ArrowUpRight size={17}/></span></div></a>)}</div>
     </section>
     </>}
     {(activeSection === "inicio" || activeSection === "sobre") && <>
     <section className="clinic-story section-wrap" id="historia" aria-labelledby="clinic-story-title">
       <div className="clinic-story-visual premium-reveal">
-        <img src="/premium-dental-recepcao.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Recepção oficial da Premium Dental Clinic" loading="lazy" decoding="async" />
+        <img src="/felicita-recepcao.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Recepção oficial da Premium Dental Clinic" loading="lazy" decoding="async" />
         <span className="clinic-story-label">Premium Dental Clinic · Odontologia Integrada</span>
         <img className="clinic-story-tooth-3d" src="/Dente-3D-com-escudo-azul.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
       </div>
@@ -194,7 +194,7 @@ function Index() {
     </section>
     {activeSection === "sobre" && <>
     <section className="premium-clinic-feature section-wrap" aria-label="Acolhimento em cada detalhe">
-      <div className="premium-clinic-feature-image premium-reveal"><img src="/premium-dental-cafe.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: clínica odontológica com ambiente acolhedor" loading="lazy" decoding="async" fetchPriority="low" /></div>
+      <div className="premium-clinic-feature-image premium-reveal"><img src="/felicita-cafe.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: clínica odontológica com ambiente acolhedor" loading="lazy" decoding="async" fetchPriority="low" /></div>
       <div className="premium-clinic-feature-copy premium-reveal"><span className="eyebrow">O AMBIENTE TAMBÉM ACOLHE</span><h2>Um ambiente criado para <em>você se sentir bem.</em></h2><p>Ambientes iluminados, acabamentos sofisticados e espaços organizados para tornar cada visita mais agradável.</p><a href="#contato" className="premium-clinic-feature-link">Entre em contato <ArrowUpRight size={18}/></a></div>
     </section>
     </>}
@@ -252,8 +252,8 @@ function Index() {
     {activeSection === "resultados" && <>
     <section id="resultados" className="results-section section-wrap">
       <span className="eyebrow">RESULTADOS E TRANSFORMAÇÕES</span>{activeSection === "resultados" ? <h1>A evolução de um sorriso <span>merece ser valorizada.</span></h1> : <h2>A evolução de um sorriso <span>merece ser valorizada.</span></h2>}
-      <div className="editorial-smile premium-reveal"><img src="/premium-dental-cadeira.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} loading="lazy" decoding="async" fetchPriority="low" alt="Sorriso natural"/><div><span className="eyebrow">A BELEZA DO NATURAL</span><h2>Cada sorriso merece uma atenção única.</h2><p>Informações sobre nossos tratamentos. Agende sua avaliação e comece a sua.</p><Button onClick={abrirWhatsApp}>Agendar avaliação <ArrowUpRight size={17}/></Button></div></div>
-      <div className="premium-dental-pending">Resultados reais em preparação.</div>
+      <div className="editorial-smile premium-reveal"><img src="/felicita-cadeira.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} loading="lazy" decoding="async" fetchPriority="low" alt="Sorriso natural"/><div><span className="eyebrow">A BELEZA DO NATURAL</span><h2>Cada sorriso merece uma atenção única.</h2><p>Informações sobre nossos tratamentos. Agende sua avaliação e comece a sua.</p><Button onClick={abrirWhatsApp}>Agendar avaliação <ArrowUpRight size={17}/></Button></div></div>
+      <div className="felicita-pending">Resultados reais em preparação.</div>
       <p className="implant-comparison-note">Espaço reservado para casos reais da Premium Dental Clinic. Não há resultados de pacientes publicados nesta prévia.</p>
     </section>
     </>}
@@ -264,16 +264,16 @@ function Index() {
       <p className="team-directory-intro">Conheça o atendimento humanizado da Premium Dental Clinic. A clínica informa mais de 13 anos de experiência.</p>
       <div className="team-directory-group"><h2>Profissionais de odontologia</h2>
         <div className="team-directory-grid">
-          <article className="premium-dental-professional">
-            <img className="team-professional-photo" width={400} height={500} src="/dr_toni_clai.webp" alt="Fotografia do Dr. Toni Clai" loading="lazy" decoding="async" />
-            <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Dr. Toni Clai</h3><p>CRO-SE 2193</p></div>
+          <article className="felicita-professional">
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85" alt="Fotografia do Dr. Geraldo Martins" loading="lazy" decoding="async" />
+            <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Dr. Geraldo Martins</h3><p>CRO-SE 3149</p></div>
           </article>
-          <article className="premium-dental-professional">
-            <img className="team-professional-photo" width={400} height={500} src="/dr_joao_pedro.webp" alt="Fotografia do Dr. João Pedro" loading="lazy" decoding="async" />
-            <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Dr. João Pedro</h3><p>Odontologia</p></div>
+          <article className="felicita-professional">
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=600&q=85" alt="Fotografia do Equipe odontológica" loading="lazy" decoding="async" />
+            <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Equipe odontológica</h3><p>Odontologia</p></div>
           </article>
-          <article className="premium-dental-professional">
-            <img className="team-professional-photo" width={400} height={500} src="/profissional_03.webp" alt="Retrato de profissional da clínica" loading="lazy" decoding="async" />
+          <article className="felicita-professional">
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85" alt="Retrato de profissional da clínica" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Profissional da equipe</h3><p>Nome a confirmar</p></div>
           </article>
         </div>
@@ -281,22 +281,22 @@ function Index() {
       <div className="team-directory-group team-collaborators">
         <h2>Nossa equipe de colaboradores</h2>
         <div className="team-directory-grid">
-          <article className="premium-dental-professional">
-            <img className="team-professional-photo" width={400} height={500} src="/livia.webp" alt="Fotografia de Lívia, colaboradora da Premium Dental Clinic" loading="lazy" decoding="async" />
+          <article className="felicita-professional">
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85" alt="Fotografia de colaboradora da clínica" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">COLABORADORA DA CLÍNICA</span><h3>Lívia</h3><p>Função a confirmar</p></div>
           </article>
-          <article className="premium-dental-professional">
-            <img className="team-professional-photo" width={400} height={500} src="/colaboradora_01.webp" alt="Fotografia de colaboradora da Premium Dental Clinic" loading="lazy" decoding="async" />
+          <article className="felicita-professional">
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85" alt="Fotografia de colaboradora da Premium Dental Clinic" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">COLABORADORA DA CLÍNICA</span><h3>Colaboradora</h3><p>Nome e função a confirmar</p></div>
           </article>
-          <article className="premium-dental-professional">
-            <img className="team-professional-photo" width={400} height={500} src="/colaboradora_02.webp" alt="Fotografia de colaboradora da Premium Dental Clinic" loading="lazy" decoding="async" />
+          <article className="felicita-professional">
+            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85" alt="Fotografia de colaboradora da Premium Dental Clinic" loading="lazy" decoding="async" />
             <div className="team-professional-info"><span className="eyebrow">COLABORADORA DA CLÍNICA</span><h3>Colaboradora</h3><p>Nome e função a confirmar</p></div>
           </article>
         </div>
       </div>
     </section>
-    <section className="editorial-portrait section-wrap"><img src="/premium-dental-atendimento.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} loading="lazy" decoding="async" fetchPriority="low" alt="Profissional de odontologia"/><div><span className="eyebrow">ATENÇÃO E ACOLHIMENTO</span><h2>Uma experiência pensada para você.</h2><p>Da primeira conversa ao acompanhamento, o cuidado está em ouvir, orientar e respeitar suas necessidades.</p></div></section></>}
+    <section className="editorial-portrait section-wrap"><img src="/felicita-atendimento.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} loading="lazy" decoding="async" fetchPriority="low" alt="Profissional de odontologia"/><div><span className="eyebrow">ATENÇÃO E ACOLHIMENTO</span><h2>Uma experiência pensada para você.</h2><p>Da primeira conversa ao acompanhamento, o cuidado está em ouvir, orientar e respeitar suas necessidades.</p></div></section></>}
     {(activeSection === "inicio" || activeSection === "sobre") && <>
     <section id="depoimentos" className="testimonials-section video-testimonials"><div className="section-wrap">
       <span className="eyebrow">DEPOIMENTOS</span>
@@ -318,12 +318,12 @@ function Index() {
           <a className="location-contact-item" href="https://www.google.com/maps/dir/?api=1&destination=Avenida%20Coronel%20Loiola%2C%2088%2C%20Sim%C3%A3o%20Dias%2C%20SE" target="_blank" rel="noopener noreferrer"><span className="location-contact-icon"><MapPin size={21}/></span><span><small>ENDEREÇO</small><strong>Avenida Coronel Loiola, 88 — Simão Dias, SE</strong></span><ArrowUpRight size={18}/></a>
           <a className="location-contact-item" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"><span className="location-contact-icon"><Phone size={21}/></span><span><small>TELEFONE / WHATSAPP</small><strong>(79) 99851-2405</strong></span><ArrowUpRight size={18}/></a>
           <div className="location-contact-item location-hours"><span className="location-contact-icon"><Clock3 size={21}/></span><span><small>HORÁRIO DE FUNCIONAMENTO</small><strong>Segunda e terça: 08h–12h e 14h–18h</strong><strong>Quarta: 08h–12h e 14h–18h</strong><strong>Quinta: 08h–12h e 14h–21h</strong><strong>Sexta: 08h–18h</strong><strong>Sábado: 08h–12h · Domingo: fechado</strong></span></div>
-          <a className="location-contact-item" href="https://www.instagram.com/premium-dental_odontologia/" target="_blank" rel="noopener noreferrer"><span className="location-contact-icon"><Instagram size={21}/></span><span><small>INSTAGRAM</small><strong>@premium-dental_odontologia</strong></span><ArrowUpRight size={18}/></a>
+          <a className="location-contact-item" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span className="location-contact-icon"><Instagram size={21}/></span><span><small>INSTAGRAM</small><strong>Instagram oficial da clínica</strong></span><ArrowUpRight size={18}/></a>
         </div>
         <div className="location-premium-actions"><a className="location-route-button" href="https://www.google.com/maps/dir/?api=1&destination=Avenida%20Coronel%20Loiola%2C%2088%2C%20Sim%C3%A3o%20Dias%2C%20SE" target="_blank" rel="noopener noreferrer"><MapPin size={18}/> Traçar rota <ArrowUpRight size={17}/></a><Button variant="outline" onClick={abrirWhatsApp}>Agendar avaliação <ArrowUpRight size={17}/></Button></div>
       </div>
       <div className="location-premium-media premium-reveal">
-        <figure className="location-facade-photo"><img src="/premium-dental-fachada.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: clínica odontológica" loading="lazy" decoding="async" fetchPriority="low" /><figcaption>Premium Dental Clinic · Simão Dias, SE</figcaption></figure>
+        <figure className="location-facade-photo"><img src="/felicita-fachada.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Foto oficial da Premium Dental Clinic: clínica odontológica" loading="lazy" decoding="async" fetchPriority="low" /><figcaption>Premium Dental Clinic · Simão Dias, SE</figcaption></figure>
         <div className="location-map"><iframe title="Mapa da Premium Dental Clinic — Rua Presidente Vargas, 166, Simão Dias" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Avenida%20Coronel%20Loiola%2C%2088%2C%20Sim%C3%A3o%20Dias%2C%20SE&output=embed" /></div>
       </div>
     </section>
@@ -331,8 +331,8 @@ function Index() {
     {activeTreatment && <section className="treatment-detail-page section-wrap" id="detalhes-tratamento">
       <a href="#tratamentos" className="treatment-back"><ArrowRight size={17} style={{ transform: "rotate(180deg)" }}/> Voltar aos tratamentos</a>
       <div className="treatment-detail-head"><span className="eyebrow">PREMIUM DENTAL CLINIC · TRATAMENTOS</span><h1>{activeTreatment.title}</h1><p>{activeTreatment.description} Conheça as possibilidades de cuidado e tire suas dúvidas com a equipe da clínica. A indicação e a disponibilidade dependem de avaliação profissional.</p><Button onClick={abrirWhatsApp}>Solicitar avaliação <ArrowUpRight size={17}/></Button></div>
-      {activeTreatmentIndex === 0 && <div className="premium-dental-tooth-showcase"><div><span className="eyebrow">CUIDADOS COM SEU SORRISO</span><h2>Proteção e bem-estar em cada etapa.</h2><p>O planejamento começa com uma avaliação individualizada e atenção à saúde bucal.</p></div><img src="/Dente-3D-com-escudo-azul.webp" alt="Ilustração tridimensional de um dente com escudo azul" loading="lazy" /></div>}
-      <div className="treatment-case-area"><span className="eyebrow">CASOS REAIS</span><h2>Resultados que contam histórias.</h2>{activeTreatmentIndex === 0 ? <><div className="premium-dental-pending">Galeria de resultados reais em preparação.</div><p className="implant-comparison-note">Espaço reservado para casos reais da Premium Dental Clinic. Não há resultados de pacientes publicados nesta prévia.</p></> : <div className="treatment-case-placeholder"><Sparkles size={31}/><h3>Espaço para fotos de casos reais</h3><p>Adicionaremos aqui fotografias de antes e depois fornecidas pela clínica, com autorização do paciente e identificação adequada.</p></div>}</div>
+      {activeTreatmentIndex === 0 && <div className="felicita-tooth-showcase"><div><span className="eyebrow">CUIDADOS COM SEU SORRISO</span><h2>Proteção e bem-estar em cada etapa.</h2><p>O planejamento começa com uma avaliação individualizada e atenção à saúde bucal.</p></div><img src="/Dente-3D-com-escudo-azul.webp" alt="Ilustração tridimensional de um dente com escudo azul" loading="lazy" /></div>}
+      <div className="treatment-case-area"><span className="eyebrow">CASOS REAIS</span><h2>Resultados que contam histórias.</h2>{activeTreatmentIndex === 0 ? <><div className="felicita-pending">Galeria de resultados reais em preparação.</div><p className="implant-comparison-note">Espaço reservado para casos reais da Premium Dental Clinic. Não há resultados de pacientes publicados nesta prévia.</p></> : <div className="treatment-case-placeholder"><Sparkles size={31}/><h3>Espaço para fotos de casos reais</h3><p>Adicionaremos aqui fotografias de antes e depois fornecidas pela clínica, com autorização do paciente e identificação adequada.</p></div>}</div>
     </section>}
     {(activeSection === "inicio" || activeSection === "sobre") && <section className="gold-signature" aria-label="Identidade Premium Dental Clinic">
       <div className="gold-signature-inner premium-reveal">
@@ -346,7 +346,7 @@ function Index() {
     <button type="button" className={`back-to-top ${showBackToTop ? "is-visible" : ""}`} aria-label="Voltar ao topo" title="Voltar ao topo" onClick={() => { if (activeSection !== "inicio") window.location.hash = "inicio"; else window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }}><ArrowUp size={21} aria-hidden="true" /></button>
     <footer className="site-footer"><div className="footer-premium-inner">
       <div className="footer-premium-main">
-        <a className="brand brand-official" href="#inicio" aria-label="Premium Dental Clinic — voltar ao início"><img className="premium-dental-official-logo" src="/logo%20Felicit%C3%A1.png" alt="Premium Dental Clinic Odontologia Integrada" decoding="async" /></a>
+        <a className="brand brand-official" href="#inicio" aria-label="Premium Dental Clinic — voltar ao início"><span className="premium-clinic-wordmark">PREMIUM <strong>DENTAL CLINIC</strong></span></a>
         <p>Cuidar. Acolher. Fazer sorrir.</p>
         <span>© {new Date().getFullYear()} Premium Dental Clinic</span>
       </div>
