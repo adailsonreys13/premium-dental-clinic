@@ -1,28 +1,31 @@
-# Felicitá
+# Premium Dental Clinic
 
-Crie apenas uma página em branco com o texto "Site em desenvolvimento".
+Site institucional da Premium Dental Clinic, adaptado a partir da estrutura visual do projeto Felicitá.
 
-Use React, TypeScript e Tailwind CSS.
+## Tecnologias
+- React 19 + TypeScript
+- TanStack Start / React Router
+- Vite
+- Tailwind CSS 4
+- Lucide React
 
-Não adicione funcionalidades, imagens, animações, banco de dados ou integrações. Vou desenvolver o restante pelo GitHub.
+## Desenvolvimento
+Requisitos: Node.js compatível com Vite 8 e npm ou Bun.
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/5123fb80-d2f8-4a04-b9b1-2f339c91b132).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
+npm install
 npm run dev
 ```
+
+Build de produção:
+
+```bash
+npm run build
+```
+
+## Dados da clínica configurados no projeto
+- WhatsApp: https://wa.me/557999914909
+- Endereço: Avenida Coronel Loiola, 88, Simão Dias – SE
+- Responsável técnico informado: Dr. Geraldo Martins · CRO-SE 3149 · EPAO 538
+
+Antes da publicação, confirme os dados comerciais e profissionais, substitua as imagens ilustrativas por imagens autorizadas da clínica e valide o fluxo de agendamento.
