@@ -1,28 +1,27 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiOwppbXBvcnQgKiBhcyBI
-b3ZlckNhcmRQcmltaXRpdmUgZnJvbSAiQHJhZGl4LXVpL3JlYWN0LWhvdmVy
-LWNhcmQiOwoKaW1wb3J0IHsgY24gfSBmcm9tICJAL2xpYi91dGlscyI7Cgpj
-b25zdCBIb3ZlckNhcmQgPSBIb3ZlckNhcmRQcmltaXRpdmUuUm9vdDsKCmNv
-bnN0IEhvdmVyQ2FyZFRyaWdnZXIgPSBIb3ZlckNhcmRQcmltaXRpdmUuVHJp
-Z2dlcjsKCmNvbnN0IEhvdmVyQ2FyZENvbnRlbnQgPSBSZWFjdC5mb3J3YXJk
-UmVmPAogIFJlYWN0LkVsZW1lbnRSZWY8dHlwZW9mIEhvdmVyQ2FyZFByaW1p
-dGl2ZS5Db250ZW50PiwKICBSZWFjdC5Db21wb25lbnRQcm9wc1dpdGhvdXRS
-ZWY8dHlwZW9mIEhvdmVyQ2FyZFByaW1pdGl2ZS5Db250ZW50Pgo+KCh7IGNs
-YXNzTmFtZSwgYWxpZ24gPSAiY2VudGVyIiwgc2lkZU9mZnNldCA9IDQsIC4u
-LnByb3BzIH0sIHJlZikgPT4gKAogIDxIb3ZlckNhcmRQcmltaXRpdmUuQ29u
-dGVudAogICAgcmVmPXtyZWZ9CiAgICBhbGlnbj17YWxpZ259CiAgICBzaWRl
-T2Zmc2V0PXtzaWRlT2Zmc2V0fQogICAgY2xhc3NOYW1lPXtjbigKICAgICAg
-InotNTAgdy02NCByb3VuZGVkLW1kIGJvcmRlciBiZy1wb3BvdmVyIHAtNCB0
-ZXh0LXBvcG92ZXItZm9yZWdyb3VuZCBzaGFkb3ctbWQgb3V0bGluZS1ub25l
-IGRhdGEtW3N0YXRlPW9wZW5dOmFuaW1hdGUtaW4gZGF0YS1bc3RhdGU9Y2xv
-c2VkXTphbmltYXRlLW91dCBkYXRhLVtzdGF0ZT1jbG9zZWRdOmZhZGUtb3V0
-LTAgZGF0YS1bc3RhdGU9b3Blbl06ZmFkZS1pbi0wIGRhdGEtW3N0YXRlPWNs
-b3NlZF06em9vbS1vdXQtOTUgZGF0YS1bc3RhdGU9b3Blbl06em9vbS1pbi05
-NSBkYXRhLVtzaWRlPWJvdHRvbV06c2xpZGUtaW4tZnJvbS10b3AtMiBkYXRh
-LVtzaWRlPWxlZnRdOnNsaWRlLWluLWZyb20tcmlnaHQtMiBkYXRhLVtzaWRl
-PXJpZ2h0XTpzbGlkZS1pbi1mcm9tLWxlZnQtMiBkYXRhLVtzaWRlPXRvcF06
-c2xpZGUtaW4tZnJvbS1ib3R0b20tMiBvcmlnaW4tKC0tcmFkaXgtaG92ZXIt
-Y2FyZC1jb250ZW50LXRyYW5zZm9ybS1vcmlnaW4pIiwKICAgICAgY2xhc3NO
-YW1lLAogICAgKX0KICAgIHsuLi5wcm9wc30KICAvPgopKTsKSG92ZXJDYXJk
-Q29udGVudC5kaXNwbGF5TmFtZSA9IEhvdmVyQ2FyZFByaW1pdGl2ZS5Db250
-ZW50LmRpc3BsYXlOYW1lOwoKZXhwb3J0IHsgSG92ZXJDYXJkLCBIb3ZlckNh
-cmRUcmlnZ2VyLCBIb3ZlckNhcmRDb250ZW50IH07Cg==
+import * as React from "react";
+import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
+
+import { cn } from "@/lib/utils";
+
+const HoverCard = HoverCardPrimitive.Root;
+
+const HoverCardTrigger = HoverCardPrimitive.Trigger;
+
+const HoverCardContent = React.forwardRef<
+  React.ElementRef<typeof HoverCardPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+  <HoverCardPrimitive.Content
+    ref={ref}
+    align={align}
+    sideOffset={sideOffset}
+    className={cn(
+      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-hover-card-content-transform-origin)",
+      className,
+    )}
+    {...props}
+  />
+));
+HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
+
+export { HoverCard, HoverCardTrigger, HoverCardContent };
