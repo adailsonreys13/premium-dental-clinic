@@ -170,7 +170,7 @@ function Index() {
       <div className="clinic-story-visual premium-reveal">
         <img src="/felicita-recepcao.webp" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"; }} alt="Recepção oficial da Premium Dental Clinic" loading="lazy" decoding="async" />
         <span className="clinic-story-label">Premium Dental Clinic · Odontologia Integrada</span>
-        <img className="clinic-story-tooth-3d" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img className="clinic-story-tooth-3d" src="/compressed/Dente-3D-com-escudo-azul.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
       </div>
       <div className="clinic-story-content premium-reveal">
         <span className="eyebrow">NOSSA HISTÓRIA</span>
@@ -195,7 +195,7 @@ function Index() {
         </div>
         <div className="implant-showcase-art" aria-label="Ilustração esquemática de arcada dentária e implante">
           <div className="implant-orbit implant-orbit-outer"/><div className="implant-orbit implant-orbit-inner"/>
-          <img className="implant-anatomy implant-3d-image" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85" alt="Modelo tridimensional de implante dentário" loading="lazy" />
+          <img className="implant-anatomy implant-3d-image" src="/compressed/implante-3d.webp"035-3c981b782dfe?auto=format&fit=crop&w=900&q=85" alt="Modelo tridimensional de implante dentário" loading="lazy" />
         </div>
         <div className="implant-showcase-points">
           <article className="implant-point"><span className="implant-dot"/><h3>Implante imediato</h3><p>Em casos selecionados, a instalação do implante pode acontecer em uma etapa próxima à extração.</p><button type="button" onClick={() => { window.location.hash = "tratamento-1"; }}>Saiba mais <ArrowUpRight size={14}/></button></article>
