@@ -257,8 +257,8 @@ function Index() {
             <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Dr. Geraldo Martins</h3><p>CRO-SE 3149</p></div>
           </article>
           <article className="felicita-professional">
-            <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=600&q=85" alt="Imagem ilustrativa de profissional de odontologia" loading="lazy" decoding="async" />
-            <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Equipe odontológica</h3><p>Odontologia</p></div>
+            <img className="team-professional-photo" width={400} height={500} src="/Dra.%20Evellyn%20Fonseca%20CRO%204421.png" alt="Dra. Evellyn Fonseca, cirurgiã-dentista" loading="lazy" decoding="async" />
+            <div className="team-professional-info"><span className="eyebrow">PROFISSIONAL DA CLÍNICA</span><h3>Dra. Evellyn Fonseca</h3><p>CRO 4421</p></div>
           </article>
           <article className="felicita-professional">
             <img className="team-professional-photo" width={400} height={500} src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85" alt="Imagem ilustrativa de profissional de odontologia" loading="lazy" decoding="async" />
