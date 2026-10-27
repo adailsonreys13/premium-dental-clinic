@@ -1,16 +1,21 @@
-InVzZSBjbGllbnQiOwoKaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3Qi
-OwppbXBvcnQgKiBhcyBMYWJlbFByaW1pdGl2ZSBmcm9tICJAcmFkaXgtdWkv
-cmVhY3QtbGFiZWwiOwppbXBvcnQgeyBjdmEsIHR5cGUgVmFyaWFudFByb3Bz
-IH0gZnJvbSAiY2xhc3MtdmFyaWFuY2UtYXV0aG9yaXR5IjsKCmltcG9ydCB7
-IGNuIH0gZnJvbSAiQC9saWIvdXRpbHMiOwoKY29uc3QgbGFiZWxWYXJpYW50
-cyA9IGN2YSgKICAidGV4dC1zbSBmb250LW1lZGl1bSBsZWFkaW5nLW5vbmUg
-cGVlci1kaXNhYmxlZDpjdXJzb3Itbm90LWFsbG93ZWQgcGVlci1kaXNhYmxl
-ZDpvcGFjaXR5LTcwIiwKKTsKCmNvbnN0IExhYmVsID0gUmVhY3QuZm9yd2Fy
-ZFJlZjwKICBSZWFjdC5FbGVtZW50UmVmPHR5cGVvZiBMYWJlbFByaW1pdGl2
-ZS5Sb290PiwKICBSZWFjdC5Db21wb25lbnRQcm9wc1dpdGhvdXRSZWY8dHlw
-ZW9mIExhYmVsUHJpbWl0aXZlLlJvb3Q+ICYgVmFyaWFudFByb3BzPHR5cGVv
-ZiBsYWJlbFZhcmlhbnRzPgo+KCh7IGNsYXNzTmFtZSwgLi4ucHJvcHMgfSwg
-cmVmKSA9PiAoCiAgPExhYmVsUHJpbWl0aXZlLlJvb3QgcmVmPXtyZWZ9IGNs
-YXNzTmFtZT17Y24obGFiZWxWYXJpYW50cygpLCBjbGFzc05hbWUpfSB7Li4u
-cHJvcHN9IC8+CikpOwpMYWJlbC5kaXNwbGF5TmFtZSA9IExhYmVsUHJpbWl0
-aXZlLlJvb3QuZGlzcGxheU5hbWU7CgpleHBvcnQgeyBMYWJlbCB9Owo=
+"use client";
+
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const labelVariants = cva(
+  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+);
+
+const Label = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants>
+>(({ className, ...props }, ref) => (
+  <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props} />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+
+export { Label };
