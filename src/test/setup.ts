@@ -1,10 +1,20 @@
-aW1wb3J0ICJAdGVzdGluZy1saWJyYXJ5L2plc3QtZG9tL3ZpdGVzdCI7CgpP
-YmplY3QuZGVmaW5lUHJvcGVydHkod2luZG93LCAic2Nyb2xsVG8iLCB7CiAg
-d3JpdGFibGU6IHRydWUsCiAgdmFsdWU6ICgpID0+IHt9LAp9KTsKCk9iamVj
-dC5kZWZpbmVQcm9wZXJ0eSh3aW5kb3csICJtYXRjaE1lZGlhIiwgewogIHdy
-aXRhYmxlOiB0cnVlLAogIHZhbHVlOiAocXVlcnk6IHN0cmluZykgPT4gKHsK
-ICAgIG1hdGNoZXM6IGZhbHNlLAogICAgbWVkaWE6IHF1ZXJ5LAogICAgb25j
-aGFuZ2U6IG51bGwsCiAgICBhZGRMaXN0ZW5lcjogKCkgPT4ge30sCiAgICBy
-ZW1vdmVMaXN0ZW5lcjogKCkgPT4ge30sCiAgICBhZGRFdmVudExpc3RlbmVy
-OiAoKSA9PiB7fSwKICAgIHJlbW92ZUV2ZW50TGlzdGVuZXI6ICgpID0+IHt9
-LAogICAgZGlzcGF0Y2hFdmVudDogKCkgPT4ge30sCiAgfSksCn0pOwo=
+import "@testing-library/jest-dom/vitest";
+
+Object.defineProperty(window, "scrollTo", {
+  writable: true,
+  value: () => {},
+});
+
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: (query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => {},
+  }),
+});
