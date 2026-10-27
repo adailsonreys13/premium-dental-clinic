@@ -1,50 +1,70 @@
-dHlwZSBMb3ZhYmxlRXJyb3JPcHRpb25zID0gewogIG1lY2hhbmlzbT86ICJt
-YW51YWwiIHwgIm9uZXJyb3IiIHwgInVuaGFuZGxlZHJlamVjdGlvbiIgfCAi
-cmVhY3RfZXJyb3JfYm91bmRhcnkiOwogIGhhbmRsZWQ/OiBib29sZWFuOwog
-IHNldmVyaXR5PzogImVycm9yIiB8ICJ3YXJuaW5nIiB8ICJpbmZvIjsKfTsK
-CnR5cGUgTG92YWJsZUV2ZW50cyA9IHsKICB0cmFjaz86IChldmVudDogc3Ry
-aW5nLCBwcm9wZXJ0aWVzPzogUmVjb3JkPHN0cmluZywgdW5rbm93bj4pID0+
-IHN0cmluZyB8IG51bGw7CiAgY2FwdHVyZUV4Y2VwdGlvbj86ICgKICAgIGVy
-cm9yOiB1bmtub3duLAogICAgY29udGV4dD86IFJlY29yZDxzdHJpbmcsIHVu
-a25vd24+LAogICAgb3B0aW9ucz86IExvdmFibGVFcnJvck9wdGlvbnMsCiAg
-KSA9PiB2b2lkOwp9OwoKZGVjbGFyZSBnbG9iYWwgewogIGludGVyZmFjZSBX
-aW5kb3cgewogICAgX19sb3ZhYmxlRXZlbnRzPzogTG92YWJsZUV2ZW50czsK
-ICAgIF9fbG92YWJsZVJlcG9ydFJ1bnRpbWVFcnJvcj86IChwYXlsb2FkOiB7
-CiAgICAgIG1lc3NhZ2U6IHN0cmluZzsKICAgICAgc3RhY2s/OiBzdHJpbmc7
-CiAgICAgIGZpbGVuYW1lPzogc3RyaW5nOwogICAgfSkgPT4gdm9pZDsKICB9
-Cn0KCmV4cG9ydCBmdW5jdGlvbiByZXBvcnRMb3ZhYmxlRXJyb3IoZXJyb3I6
-IHVua25vd24sIGNvbnRleHQ6IFJlY29yZDxzdHJpbmcsIHVua25vd24+ID0g
-e30pIHsKICBpZiAodHlwZW9mIHdpbmRvdyA9PT0gInVuZGVmaW5lZCIpIHJl
-dHVybjsKICB3aW5kb3cuX19sb3ZhYmxlRXZlbnRzPy5jYXB0dXJlRXhjZXB0
-aW9uPy4oCiAgICBlcnJvciwKICAgIHsKICAgICAgc291cmNlOiAicmVhY3Rf
-ZXJyb3JfYm91bmRhcnkiLAogICAgICByb3V0ZTogd2luZG93LmxvY2F0aW9u
-LnBhdGhuYW1lLAogICAgICAuLi5jb250ZXh0LAogICAgfSwKICAgIHsKICAg
-ICAgbWVjaGFuaXNtOiAicmVhY3RfZXJyb3JfYm91bmRhcnkiLAogICAgICBo
-YW5kbGVkOiBmYWxzZSwKICAgICAgc2V2ZXJpdHk6ICJlcnJvciIsCiAgICB9
-LAogICk7CiAgLy8gUHJvZCBSZWFjdCBkb2VzIG5vdCByZXRocm93IGJvdW5k
-YXJ5LWNhdWdodCBlcnJvcnMgdG8gd2luZG93Lm9uZXJyb3IsIHNvIHRoZQog
-IC8vIGVkaXRvcidzIHRlbGVtZXRyeSBuZXZlciBzZWVzIHRoZW0uIEZvcndh
-cmQgdG8gbG92YWJsZS5qcydzIHJlcG9ydGluZyBob29rLAogIC8vIHdoaWNo
-IGlzIHByZXNlbnQgb25seSBpbnNpZGUgdGhlIGVkaXRvciBwcmV2aWV3Lgog
-IGNvbnN0IHN0YWNrID0gZXJyb3IgaW5zdGFuY2VvZiBFcnJvciA/IGVycm9y
-LnN0YWNrIDogdW5kZWZpbmVkOwogIHdpbmRvdy5fX2xvdmFibGVSZXBvcnRS
-dW50aW1lRXJyb3I/Lih7CiAgICBtZXNzYWdlOiBkZXNjcmliZVRocm93bihl
-cnJvciksCiAgICAuLi4oc3RhY2sgIT09IHVuZGVmaW5lZCAmJiB7IHN0YWNr
-IH0pLAogICAgZmlsZW5hbWU6IHdpbmRvdy5sb2NhdGlvbi5wYXRobmFtZSwK
-ICB9KTsKfQoKY29uc3QgTUFYX1NFUklBTElaRURfTEVOR1RIID0gMjAwMDsK
-Ci8vIExvYWRlcnMgYW5kIHNlcnZlciBmbnMgdGhyb3cgcmF3IFJlc3BvbnNl
-cyBhbmQgcGxhaW4gb2JqZWN0cyAoYSBTdXBhYmFzZQovLyBgeyBtZXNzYWdl
-LCBjb2RlLCBkZXRhaWxzIH1gKSwgd2hpY2ggU3RyaW5nKCkgcmVkdWNlcyB0
-byAiW29iamVjdCAuLi5dIi4KZnVuY3Rpb24gZGVzY3JpYmVUaHJvd24oZXJy
-b3I6IHVua25vd24pOiBzdHJpbmcgewogIGlmIChlcnJvciBpbnN0YW5jZW9m
-IFJlc3BvbnNlKSB7CiAgICByZXR1cm4gYFJlc3BvbnNlICR7ZXJyb3Iuc3Rh
-dHVzfSR7ZXJyb3IudXJsID8gYCBhdCAke2Vycm9yLnVybH1gIDogIiJ9YDsK
-ICB9CiAgaWYgKGVycm9yIGluc3RhbmNlb2YgRXJyb3IpIHJldHVybiBlcnJv
-ci5tZXNzYWdlOwogIGlmICh0eXBlb2YgZXJyb3IgPT09ICJzdHJpbmciKSBy
-ZXR1cm4gZXJyb3I7CiAgY29uc3QgeyBtZXNzYWdlIH0gPSAoZXJyb3IgPz8g
-e30pIGFzIHsgbWVzc2FnZT86IHVua25vd24gfTsKICBpZiAodHlwZW9mIG1l
-c3NhZ2UgPT09ICJzdHJpbmciICYmIG1lc3NhZ2UubGVuZ3RoID4gMCkgcmV0
-dXJuIG1lc3NhZ2U7CiAgdHJ5IHsKICAgIHJldHVybiBKU09OLnN0cmluZ2lm
-eShlcnJvcik/LnNsaWNlKDAsIE1BWF9TRVJJQUxJWkVEX0xFTkdUSCkgPz8g
-U3RyaW5nKGVycm9yKTsKICB9IGNhdGNoIHsKICAgIHJldHVybiBTdHJpbmco
-ZXJyb3IpOwogIH0KfQo=
+type LovableErrorOptions = {
+  mechanism?: "manual" | "onerror" | "unhandledrejection" | "react_error_boundary";
+  handled?: boolean;
+  severity?: "error" | "warning" | "info";
+};
+
+type LovableEvents = {
+  track?: (event: string, properties?: Record<string, unknown>) => string | null;
+  captureException?: (
+    error: unknown,
+    context?: Record<string, unknown>,
+    options?: LovableErrorOptions,
+  ) => void;
+};
+
+declare global {
+  interface Window {
+    __lovableEvents?: LovableEvents;
+    __lovableReportRuntimeError?: (payload: {
+      message: string;
+      stack?: string;
+      filename?: string;
+    }) => void;
+  }
+}
+
+export function reportLovableError(error: unknown, context: Record<string, unknown> = {}) {
+  if (typeof window === "undefined") return;
+  window.__lovableEvents?.captureException?.(
+    error,
+    {
+      source: "react_error_boundary",
+      route: window.location.pathname,
+      ...context,
+    },
+    {
+      mechanism: "react_error_boundary",
+      handled: false,
+      severity: "error",
+    },
+  );
+  // Prod React does not rethrow boundary-caught errors to window.onerror, so the
+  // editor's telemetry never sees them. Forward to lovable.js's reporting hook,
+  // which is present only inside the editor preview.
+  const stack = error instanceof Error ? error.stack : undefined;
+  window.__lovableReportRuntimeError?.({
+    message: describeThrown(error),
+    ...(stack !== undefined && { stack }),
+    filename: window.location.pathname,
+  });
+}
+
+const MAX_SERIALIZED_LENGTH = 2000;
+
+// Loaders and server fns throw raw Responses and plain objects (a Supabase
+// `{ message, code, details }`), which String() reduces to "[object ...]".
+function describeThrown(error: unknown): string {
+  if (error instanceof Response) {
+    return `Response ${error.status}${error.url ? ` at ${error.url}` : ""}`;
+  }
+  if (error instanceof Error) return error.message;
+  if (typeof error === "string") return error;
+  const { message } = (error ?? {}) as { message?: unknown };
+  if (typeof message === "string" && message.length > 0) return message;
+  try {
+    return JSON.stringify(error)?.slice(0, MAX_SERIALIZED_LENGTH) ?? String(error);
+  } catch {
+    return String(error);
+  }
+}
