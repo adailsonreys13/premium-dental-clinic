@@ -1,24 +1,26 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiOwppbXBvcnQgKiBhcyBD
-aGVja2JveFByaW1pdGl2ZSBmcm9tICJAcmFkaXgtdWkvcmVhY3QtY2hlY2ti
-b3giOwppbXBvcnQgeyBDaGVjayB9IGZyb20gImx1Y2lkZS1yZWFjdCI7Cgpp
-bXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIjsKCmNvbnN0IENoZWNr
-Ym94ID0gUmVhY3QuZm9yd2FyZFJlZjwKICBSZWFjdC5FbGVtZW50UmVmPHR5
-cGVvZiBDaGVja2JveFByaW1pdGl2ZS5Sb290PiwKICBSZWFjdC5Db21wb25l
-bnRQcm9wc1dpdGhvdXRSZWY8dHlwZW9mIENoZWNrYm94UHJpbWl0aXZlLlJv
-b3Q+Cj4oKHsgY2xhc3NOYW1lLCAuLi5wcm9wcyB9LCByZWYpID0+ICgKICA8
-Q2hlY2tib3hQcmltaXRpdmUuUm9vdAogICAgcmVmPXtyZWZ9CiAgICBjbGFz
-c05hbWU9e2NuKAogICAgICAiZ3JpZCBwbGFjZS1jb250ZW50LWNlbnRlciBw
-ZWVyIGgtNCB3LTQgc2hyaW5rLTAgcm91bmRlZC1zbSBib3JkZXIgYm9yZGVy
-LXByaW1hcnkgc2hhZG93IGN1cnNvci1wb2ludGVyIGZvY3VzLXZpc2libGU6
-b3V0bGluZS1ub25lIGZvY3VzLXZpc2libGU6cmluZy0xIGZvY3VzLXZpc2li
-bGU6cmluZy1yaW5nIGRpc2FibGVkOmN1cnNvci1ub3QtYWxsb3dlZCBkaXNh
-YmxlZDpvcGFjaXR5LTUwIGRhdGEtW3N0YXRlPWNoZWNrZWRdOmJnLXByaW1h
-cnkgZGF0YS1bc3RhdGU9Y2hlY2tlZF06dGV4dC1wcmltYXJ5LWZvcmVncm91
-bmQiLAogICAgICBjbGFzc05hbWUsCiAgICApfQogICAgey4uLnByb3BzfQog
-ID4KICAgIDxDaGVja2JveFByaW1pdGl2ZS5JbmRpY2F0b3IgY2xhc3NOYW1l
-PXtjbigiZ3JpZCBwbGFjZS1jb250ZW50LWNlbnRlciB0ZXh0LWN1cnJlbnQi
-KX0+CiAgICAgIDxDaGVjayBjbGFzc05hbWU9ImgtNCB3LTQiIC8+CiAgICA8
-L0NoZWNrYm94UHJpbWl0aXZlLkluZGljYXRvcj4KICA8L0NoZWNrYm94UHJp
-bWl0aXZlLlJvb3Q+CikpOwpDaGVja2JveC5kaXNwbGF5TmFtZSA9IENoZWNr
-Ym94UHJpbWl0aXZlLlJvb3QuZGlzcGxheU5hbWU7CgpleHBvcnQgeyBDaGVj
-a2JveCB9Owo=
+import * as React from "react";
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { Check } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+    ref={ref}
+    className={cn(
+      "grid place-content-center peer h-4 w-4 shrink-0 rounded-sm border border-primary shadow cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+      className,
+    )}
+    {...props}
+  >
+    <CheckboxPrimitive.Indicator className={cn("grid place-content-center text-current")}>
+      <Check className="h-4 w-4" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+));
+Checkbox.displayName = CheckboxPrimitive.Root.displayName;
+
+export { Checkbox };
