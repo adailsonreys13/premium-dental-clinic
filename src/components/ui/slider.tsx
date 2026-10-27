@@ -1,23 +1,23 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiOwppbXBvcnQgKiBhcyBT
-bGlkZXJQcmltaXRpdmUgZnJvbSAiQHJhZGl4LXVpL3JlYWN0LXNsaWRlciI7
-CgppbXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIjsKCmNvbnN0IFNs
-aWRlciA9IFJlYWN0LmZvcndhcmRSZWY8CiAgUmVhY3QuRWxlbWVudFJlZjx0
-eXBlb2YgU2xpZGVyUHJpbWl0aXZlLlJvb3Q+LAogIFJlYWN0LkNvbXBvbmVu
-dFByb3BzV2l0aG91dFJlZjx0eXBlb2YgU2xpZGVyUHJpbWl0aXZlLlJvb3Q+
-Cj4oKHsgY2xhc3NOYW1lLCAuLi5wcm9wcyB9LCByZWYpID0+ICgKICA8U2xp
-ZGVyUHJpbWl0aXZlLlJvb3QKICAgIHJlZj17cmVmfQogICAgY2xhc3NOYW1l
-PXtjbigicmVsYXRpdmUgZmxleCB3LWZ1bGwgdG91Y2gtbm9uZSBzZWxlY3Qt
-bm9uZSBpdGVtcy1jZW50ZXIiLCBjbGFzc05hbWUpfQogICAgey4uLnByb3Bz
-fQogID4KICAgIDxTbGlkZXJQcmltaXRpdmUuVHJhY2sgY2xhc3NOYW1lPSJy
-ZWxhdGl2ZSBoLTEuNSB3LWZ1bGwgZ3JvdyBvdmVyZmxvdy1oaWRkZW4gcm91
-bmRlZC1mdWxsIGJnLXByaW1hcnkvMjAiPgogICAgICA8U2xpZGVyUHJpbWl0
-aXZlLlJhbmdlIGNsYXNzTmFtZT0iYWJzb2x1dGUgaC1mdWxsIGJnLXByaW1h
-cnkiIC8+CiAgICA8L1NsaWRlclByaW1pdGl2ZS5UcmFjaz4KICAgIDxTbGlk
-ZXJQcmltaXRpdmUuVGh1bWIgY2xhc3NOYW1lPSJibG9jayBoLTQgdy00IHJv
-dW5kZWQtZnVsbCBib3JkZXIgYm9yZGVyLXByaW1hcnkvNTAgYmctYmFja2dy
-b3VuZCBzaGFkb3cgdHJhbnNpdGlvbi1jb2xvcnMgZm9jdXMtdmlzaWJsZTpv
-dXRsaW5lLW5vbmUgZm9jdXMtdmlzaWJsZTpyaW5nLTEgZm9jdXMtdmlzaWJs
-ZTpyaW5nLXJpbmcgZGlzYWJsZWQ6cG9pbnRlci1ldmVudHMtbm9uZSBkaXNh
-YmxlZDpvcGFjaXR5LTUwIiAvPgogIDwvU2xpZGVyUHJpbWl0aXZlLlJvb3Q+
-CikpOwpTbGlkZXIuZGlzcGxheU5hbWUgPSBTbGlkZXJQcmltaXRpdmUuUm9v
-dC5kaXNwbGF5TmFtZTsKCmV4cG9ydCB7IFNsaWRlciB9Owo=
+import * as React from "react";
+import * as SliderPrimitive from "@radix-ui/react-slider";
+
+import { cn } from "@/lib/utils";
+
+const Slider = React.forwardRef<
+  React.ElementRef<typeof SliderPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <SliderPrimitive.Root
+    ref={ref}
+    className={cn("relative flex w-full touch-none select-none items-center", className)}
+    {...props}
+  >
+    <SliderPrimitive.Track className="relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20">
+      <SliderPrimitive.Range className="absolute h-full bg-primary" />
+    </SliderPrimitive.Track>
+    <SliderPrimitive.Thumb className="block h-4 w-4 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
+  </SliderPrimitive.Root>
+));
+Slider.displayName = SliderPrimitive.Root.displayName;
+
+export { Slider };
