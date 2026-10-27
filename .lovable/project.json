@@ -1,3 +1,5 @@
-ewogICJzY2hlbWFWZXJzaW9uIjogMSwKICAidGVtcGxhdGUiOiAidGFuc3Rh
-Y2tfc3RhcnRfdHNfY3VycmVudCIsCiAgInJldmlzaW9uIjogInRhbnN0YWNr
-X3N0YXJ0X3RzX2N1cnJlbnQtNDM1ZmQ5MzdlYjY4Igp9Cg==
+{
+  "schemaVersion": 1,
+  "template": "tanstack_start_ts_current",
+  "revision": "tanstack_start_ts_current-435fd937eb68"
+}
