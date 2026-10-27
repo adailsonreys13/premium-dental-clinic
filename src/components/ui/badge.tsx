@@ -1,25 +1,32 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiOwppbXBvcnQgeyBjdmEs
-IHR5cGUgVmFyaWFudFByb3BzIH0gZnJvbSAiY2xhc3MtdmFyaWFuY2UtYXV0
-aG9yaXR5IjsKCmltcG9ydCB7IGNuIH0gZnJvbSAiQC9saWIvdXRpbHMiOwoK
-Y29uc3QgYmFkZ2VWYXJpYW50cyA9IGN2YSgKICAiaW5saW5lLWZsZXggaXRl
-bXMtY2VudGVyIHJvdW5kZWQtbWQgYm9yZGVyIHB4LTIuNSBweS0wLjUgdGV4
-dC14cyBmb250LXNlbWlib2xkIHRyYW5zaXRpb24tY29sb3JzIGZvY3VzOm91
-dGxpbmUtbm9uZSBmb2N1czpyaW5nLTIgZm9jdXM6cmluZy1yaW5nIGZvY3Vz
-OnJpbmctb2Zmc2V0LTIiLAogIHsKICAgIHZhcmlhbnRzOiB7CiAgICAgIHZh
-cmlhbnQ6IHsKICAgICAgICBkZWZhdWx0OiAiYm9yZGVyLXRyYW5zcGFyZW50
-IGJnLXByaW1hcnkgdGV4dC1wcmltYXJ5LWZvcmVncm91bmQgc2hhZG93IGhv
-dmVyOmJnLXByaW1hcnkvODAiLAogICAgICAgIHNlY29uZGFyeToKICAgICAg
-ICAgICJib3JkZXItdHJhbnNwYXJlbnQgYmctc2Vjb25kYXJ5IHRleHQtc2Vj
-b25kYXJ5LWZvcmVncm91bmQgaG92ZXI6Ymctc2Vjb25kYXJ5LzgwIiwKICAg
-ICAgICBkZXN0cnVjdGl2ZToKICAgICAgICAgICJib3JkZXItdHJhbnNwYXJl
-bnQgYmctZGVzdHJ1Y3RpdmUgdGV4dC1kZXN0cnVjdGl2ZS1mb3JlZ3JvdW5k
-IHNoYWRvdyBob3ZlcjpiZy1kZXN0cnVjdGl2ZS84MCIsCiAgICAgICAgb3V0
-bGluZTogInRleHQtZm9yZWdyb3VuZCIsCiAgICAgIH0sCiAgICB9LAogICAg
-ZGVmYXVsdFZhcmlhbnRzOiB7CiAgICAgIHZhcmlhbnQ6ICJkZWZhdWx0IiwK
-ICAgIH0sCiAgfSwKKTsKCmV4cG9ydCBpbnRlcmZhY2UgQmFkZ2VQcm9wcwog
-IGV4dGVuZHMgUmVhY3QuSFRNTEF0dHJpYnV0ZXM8SFRNTERpdkVsZW1lbnQ+
-LCBWYXJpYW50UHJvcHM8dHlwZW9mIGJhZGdlVmFyaWFudHM+IHt9CgpmdW5j
-dGlvbiBCYWRnZSh7IGNsYXNzTmFtZSwgdmFyaWFudCwgLi4ucHJvcHMgfTog
-QmFkZ2VQcm9wcykgewogIHJldHVybiA8ZGl2IGNsYXNzTmFtZT17Y24oYmFk
-Z2VWYXJpYW50cyh7IHZhcmlhbnQgfSksIGNsYXNzTmFtZSl9IHsuLi5wcm9w
-c30gLz47Cn0KCmV4cG9ydCB7IEJhZGdlLCBiYWRnZVZhcmlhbnRzIH07Cg==
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
+        secondary:
+          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive:
+          "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
+        outline: "text-foreground",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+);
+
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof badgeVariants> {}
+
+function Badge({ className, variant, ...props }: BadgeProps) {
+  return <div className={cn(badgeVariants({ variant }), className)} {...props} />;
+}
+
+export { Badge, badgeVariants };
