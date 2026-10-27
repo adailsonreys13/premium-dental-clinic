@@ -1,43 +1,49 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiOwppbXBvcnQgeyBTbG90
-IH0gZnJvbSAiQHJhZGl4LXVpL3JlYWN0LXNsb3QiOwppbXBvcnQgeyBjdmEs
-IHR5cGUgVmFyaWFudFByb3BzIH0gZnJvbSAiY2xhc3MtdmFyaWFuY2UtYXV0
-aG9yaXR5IjsKCmltcG9ydCB7IGNuIH0gZnJvbSAiQC9saWIvdXRpbHMiOwoK
-Y29uc3QgYnV0dG9uVmFyaWFudHMgPSBjdmEoCiAgImlubGluZS1mbGV4IGl0
-ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBnYXAtMiB3aGl0ZXNwYWNlLW5v
-d3JhcCByb3VuZGVkLW1kIHRleHQtc20gZm9udC1tZWRpdW0gY3Vyc29yLXBv
-aW50ZXIgdHJhbnNpdGlvbi1jb2xvcnMgZm9jdXMtdmlzaWJsZTpvdXRsaW5l
-LW5vbmUgZm9jdXMtdmlzaWJsZTpyaW5nLTEgZm9jdXMtdmlzaWJsZTpyaW5n
-LXJpbmcgZGlzYWJsZWQ6cG9pbnRlci1ldmVudHMtbm9uZSBkaXNhYmxlZDpv
-cGFjaXR5LTUwIGRpc2FibGVkOmN1cnNvci1ub3QtYWxsb3dlZCBbJl9zdmdd
-OnBvaW50ZXItZXZlbnRzLW5vbmUgWyZfc3ZnXTpzaXplLTQgWyZfc3ZnXTpz
-aHJpbmstMCIsCiAgewogICAgdmFyaWFudHM6IHsKICAgICAgdmFyaWFudDog
-ewogICAgICAgIGRlZmF1bHQ6ICJiZy1wcmltYXJ5IHRleHQtcHJpbWFyeS1m
-b3JlZ3JvdW5kIHNoYWRvdyBob3ZlcjpiZy1wcmltYXJ5LzkwIiwKICAgICAg
-ICBkZXN0cnVjdGl2ZTogImJnLWRlc3RydWN0aXZlIHRleHQtZGVzdHJ1Y3Rp
-dmUtZm9yZWdyb3VuZCBzaGFkb3ctc20gaG92ZXI6YmctZGVzdHJ1Y3RpdmUv
-OTAiLAogICAgICAgIG91dGxpbmU6CiAgICAgICAgICAiYm9yZGVyIGJvcmRl
-ci1pbnB1dCBiZy1iYWNrZ3JvdW5kIHNoYWRvdy1zbSBob3ZlcjpiZy1hY2Nl
-bnQgaG92ZXI6dGV4dC1hY2NlbnQtZm9yZWdyb3VuZCIsCiAgICAgICAgc2Vj
-b25kYXJ5OiAiYmctc2Vjb25kYXJ5IHRleHQtc2Vjb25kYXJ5LWZvcmVncm91
-bmQgc2hhZG93LXNtIGhvdmVyOmJnLXNlY29uZGFyeS84MCIsCiAgICAgICAg
-Z2hvc3Q6ICJob3ZlcjpiZy1hY2NlbnQgaG92ZXI6dGV4dC1hY2NlbnQtZm9y
-ZWdyb3VuZCIsCiAgICAgICAgbGluazogInRleHQtcHJpbWFyeSB1bmRlcmxp
-bmUtb2Zmc2V0LTQgaG92ZXI6dW5kZXJsaW5lIiwKICAgICAgfSwKICAgICAg
-c2l6ZTogewogICAgICAgIGRlZmF1bHQ6ICJoLTkgcHgtNCBweS0yIiwKICAg
-ICAgICBzbTogImgtOCByb3VuZGVkLW1kIHB4LTMgdGV4dC14cyIsCiAgICAg
-ICAgbGc6ICJoLTEwIHJvdW5kZWQtbWQgcHgtOCIsCiAgICAgICAgaWNvbjog
-ImgtOSB3LTkiLAogICAgICB9LAogICAgfSwKICAgIGRlZmF1bHRWYXJpYW50
-czogewogICAgICB2YXJpYW50OiAiZGVmYXVsdCIsCiAgICAgIHNpemU6ICJk
-ZWZhdWx0IiwKICAgIH0sCiAgfSwKKTsKCmV4cG9ydCBpbnRlcmZhY2UgQnV0
-dG9uUHJvcHMKICBleHRlbmRzIFJlYWN0LkJ1dHRvbkhUTUxBdHRyaWJ1dGVz
-PEhUTUxCdXR0b25FbGVtZW50PiwgVmFyaWFudFByb3BzPHR5cGVvZiBidXR0
-b25WYXJpYW50cz4gewogIGFzQ2hpbGQ/OiBib29sZWFuOwp9Cgpjb25zdCBC
-dXR0b24gPSBSZWFjdC5mb3J3YXJkUmVmPEhUTUxCdXR0b25FbGVtZW50LCBC
-dXR0b25Qcm9wcz4oCiAgKHsgY2xhc3NOYW1lLCB2YXJpYW50LCBzaXplLCBh
-c0NoaWxkID0gZmFsc2UsIC4uLnByb3BzIH0sIHJlZikgPT4gewogICAgY29u
-c3QgQ29tcCA9IGFzQ2hpbGQgPyBTbG90IDogImJ1dHRvbiI7CiAgICByZXR1
-cm4gKAogICAgICA8Q29tcCBjbGFzc05hbWU9e2NuKGJ1dHRvblZhcmlhbnRz
-KHsgdmFyaWFudCwgc2l6ZSwgY2xhc3NOYW1lIH0pKX0gcmVmPXtyZWZ9IHsu
-Li5wcm9wc30gLz4KICAgICk7CiAgfSwKKTsKQnV0dG9uLmRpc3BsYXlOYW1l
-ID0gIkJ1dHRvbiI7CgpleHBvcnQgeyBCdXR0b24sIGJ1dHRvblZhcmlhbnRz
-IH07Cg==
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-9 px-4 py-2",
+        sm: "h-8 rounded-md px-3 text-xs",
+        lg: "h-10 rounded-md px-8",
+        icon: "h-9 w-9",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  },
+);
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+    );
+  },
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
