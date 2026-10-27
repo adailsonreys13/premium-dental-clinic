@@ -1,28 +1,31 @@
 # Premium Dental Clinic
 
-Site institucional responsivo da Premium Dental Clinic, em Simão Dias, Sergipe.
+Site institucional da Premium Dental Clinic, adaptado a partir da estrutura visual do projeto Felicitá.
 
 ## Tecnologias
-- React + TypeScript
+- React 19 + TypeScript
+- TanStack Start / React Router
 - Vite
-- CSS responsivo
+- Tailwind CSS 4
 - Lucide React
 
-## Executar localmente
-Requisitos: Node.js e npm.
+## Desenvolvimento
+Requisitos: Node.js compatível com Vite 8 e npm ou Bun.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Para compilar a versão de produção: `npm run build`.
+Build de produção:
 
-## Dados a confirmar antes da publicação
-- WhatsApp configurado: `https://wa.me/557999914909`
-- Endereço informado: Avenida Coronel Loiola, 88, Simão Dias – SE
+```bash
+npm run build
+```
+
+## Dados da clínica configurados no projeto
+- WhatsApp: https://wa.me/557999914909
+- Endereço: Avenida Coronel Loiola, 88, Simão Dias – SE
 - Responsável técnico informado: Dr. Geraldo Martins · CRO-SE 3149 · EPAO 538
 
-Confirme todos os dados, substitua imagens genéricas por fotografias autorizadas da clínica e adicione políticas legais necessárias antes de publicar.
-
-Este projeto é independente. O repositório Felicitá não foi alterado.
+Antes da publicação, confirme os dados comerciais e profissionais, substitua as imagens ilustrativas por imagens autorizadas da clínica e valide o fluxo de agendamento.

@@ -1,0 +1,35 @@
+name: Prepare video covers
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/capas_video_felicita.zip'
+      - '.github/workflows/video-posters.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prepare-covers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extract uploaded video screenshot covers
+        run: |
+          mkdir -p public/video-covers
+          unzip -jo -o public/capas_video_felicita.zip 'video-*.webp' -d public/video-covers/
+          for i in 1 2 3; do
+            test -s "public/video-covers/video-$i.webp"
+          done
+      - name: Commit covers to the site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/video-covers/video-*.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: add actual patient video screenshots as covers"
+            git push
+          fi
