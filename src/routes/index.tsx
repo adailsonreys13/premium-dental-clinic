@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, ArrowRight, Heart, ShieldCheck, Sparkles, Smile, Menu, X, Check, MessageCircle, Plus, MapPin, Instagram, Phone, Clock3, ChevronRight, Stethoscope, HeartHandshake, ScanLine, Quote, ArrowUp, Play } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowUpRight, ArrowRight, Heart, ShieldCheck, Sparkles, Smile, Menu, X, Check, MessageCircle, Plus, MapPin, Instagram, Phone, Clock3, ChevronRight, Stethoscope, HeartHandshake, ScanLine, Quote, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 
@@ -214,7 +214,7 @@ function Index() {
       </div>
       <div className="fel-rehab-visual">
         <div className="fel-rehab-ring"/><div className="fel-rehab-ring fel-rehab-ring-inner"/>
-        <img src="/Dente-3D-com-escudo-azul.webp" alt="Dente 3D com escudo azul simbolizando proteção e cuidado odontológico" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85" alt="Dente 3D com escudo azul simbolizando proteção e cuidado odontológico" loading="lazy"/>
       </div>
     </section>
     <section id="implantes" className="implant-showcase section-wrap" aria-labelledby="implant-showcase-title">
@@ -226,7 +226,7 @@ function Index() {
         </div>
         <div className="implant-showcase-art" aria-label="Ilustração esquemática de arcada dentária e implante">
           <div className="implant-orbit implant-orbit-outer"/><div className="implant-orbit implant-orbit-inner"/>
-          <img className="implant-anatomy implant-3d-image" src="/implante-3d.webp" alt="Modelo tridimensional de implante dentário" loading="lazy" />
+          <img className="implant-anatomy implant-3d-image" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85" alt="Modelo tridimensional de implante dentário" loading="lazy" />
         </div>
         <div className="implant-showcase-points">
           <article className="implant-point"><span className="implant-dot"/><h3>Implante imediato</h3><p>Em casos selecionados, a instalação do implante pode acontecer em uma etapa próxima à extração.</p><button type="button" onClick={() => { window.location.hash = "tratamento-1"; }}>Saiba mais <ArrowUpRight size={14}/></button></article>
@@ -318,7 +318,7 @@ function Index() {
     {activeTreatment && <section className="treatment-detail-page section-wrap" id="detalhes-tratamento">
       <a href="#tratamentos" className="treatment-back"><ArrowRight size={17} style={{ transform: "rotate(180deg)" }}/> Voltar aos tratamentos</a>
       <div className="treatment-detail-head"><span className="eyebrow">PREMIUM DENTAL CLINIC · TRATAMENTOS</span><h1>{activeTreatment.title}</h1><p>{activeTreatment.description} Conheça as possibilidades de cuidado e tire suas dúvidas com a equipe da clínica. A indicação e a disponibilidade dependem de avaliação profissional.</p><Button onClick={abrirWhatsApp}>Solicitar avaliação <ArrowUpRight size={17}/></Button></div>
-      {activeTreatmentIndex === 0 && <div className="felicita-tooth-showcase"><div><span className="eyebrow">CUIDADOS COM SEU SORRISO</span><h2>Proteção e bem-estar em cada etapa.</h2><p>O planejamento começa com uma avaliação individualizada e atenção à saúde bucal.</p></div><img src="/Dente-3D-com-escudo-azul.webp" alt="Ilustração tridimensional de um dente com escudo azul" loading="lazy" /></div>}
+      {activeTreatmentIndex === 0 && <div className="felicita-tooth-showcase"><div><span className="eyebrow">CUIDADOS COM SEU SORRISO</span><h2>Proteção e bem-estar em cada etapa.</h2><p>O planejamento começa com uma avaliação individualizada e atenção à saúde bucal.</p></div><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85" alt="Ilustração tridimensional de um dente com escudo azul" loading="lazy" /></div>}
       <div className="treatment-case-area"><span className="eyebrow">CASOS REAIS</span><h2>Resultados que contam histórias.</h2>{activeTreatmentIndex === 0 ? <><div className="felicita-pending">Galeria de resultados reais em preparação.</div><p className="implant-comparison-note">Espaço reservado para casos reais da Premium Dental Clinic. Não há resultados de pacientes publicados nesta prévia.</p></> : <div className="treatment-case-placeholder"><Sparkles size={31}/><h3>Espaço para fotos de casos reais</h3><p>Adicionaremos aqui fotografias de antes e depois fornecidas pela clínica, com autorização do paciente e identificação adequada.</p></div>}</div>
     </section>}
     {(activeSection === "inicio" || activeSection === "sobre") && <section className="gold-signature" aria-label="Identidade Premium Dental Clinic">
